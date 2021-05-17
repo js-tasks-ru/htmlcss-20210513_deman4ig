@@ -1,4 +1,127 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <!-- Ваше решение -->
+<!-- Ваше решение -->
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      height: 1.25em;
+      line-height: 1.25em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    header h1,
+    header nav,
+    article,
+    footer p {
+      padding-top: 20px;
+      width: 968px;
+      margin: 0 auto;
+    }
+
+    body {
+      height: 100vh;
+    }
+
+    header {
+      background-color: #AA3939;
+      height: 20%;
+      position: relative;
+    }
+
+    nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 1em;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline;
+      margin-right: 1em;
+    }
+    nav li:last-of-type {
+      margin-right: 0;
+    }
+
+    main {
+      background-color: #FFA500;
+      height: 60%;
+    }
+
+    article {
+      margin-bottom: 2em;
+    }
+
+    article ul, article ol {
+      margin-top: 1em;
+    }
+
+    footer {
+      background-color: #2E8B57;
+      height: 20%;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Header</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>Article 1</h2>
+      <ul>
+        <li>Оригинальная трилогия</li>
+        <li>Трилогия приквелов</li>
+        <li>Трилогия сиквелов</li>
+      </ul>
+    </article>
+    <article>
+      <h2>Article 2</h2>
+      <ol>
+        <li>Эпизод IV — Новая надежда</li>
+        <li>Эпизод V — Империя наносит ответный удар</li>
+        <li>Эпизод VI — Возвращение джедая</li>
+      </ol>
+    </article>
+  </main>
+  <footer>
+    <p>Footer</p>
+  </footer>
+</body>
+
 </html>
