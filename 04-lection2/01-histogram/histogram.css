@@ -25,7 +25,7 @@
 .histogram__link {
     text-decoration: none;
     color: var(--blue, #4263EB);
-    padding-left: 1em;
+    margin-left: 1em;
 }
 
 .histogram__counter {
@@ -35,7 +35,7 @@
 }
 
 .histogram__chart {
-    padding-top: 2.5em;
+    margin-top: 2.5em;
     display: flex;
     align-items: flex-end;
 }
