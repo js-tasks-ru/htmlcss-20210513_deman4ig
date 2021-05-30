@@ -1,0 +1,8 @@
+.page {
+    background-color: var(--white, #fff);
+}
+
+.page__box {
+    max-width: 1110px;
+    margin: 0 auto;
+}
