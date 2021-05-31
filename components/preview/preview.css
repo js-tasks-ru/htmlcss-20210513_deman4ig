@@ -1,0 +1,23 @@
+.preview {
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.preview__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.preview__header {
+    margin-bottom: 0;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--black, #212429);
+}

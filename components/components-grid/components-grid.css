@@ -1,0 +1,15 @@
+@import "../preview/preview.css";
+@import "../../04-lection2/01-histogram/histogram.css";
+
+.components-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.components-grid__element {
+    margin: 15px;
+    width: calc(33% - 30px);
+    box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
+    border-radius: 12px;
+    background: var(--white, #FFFFFF);
+}
