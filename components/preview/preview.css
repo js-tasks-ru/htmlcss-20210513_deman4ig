@@ -1,17 +1,17 @@
-.preview {
+.card {
     padding: 30px 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.preview__body {
+.card__body {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.preview__header {
+.card__title {
     margin-bottom: 0;
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -20,4 +20,15 @@
     line-height: 25px;
     text-align: center;
     color: var(--black, #212429);
+}
+
+.card__subtitle {
+    margin: 6px 0 0;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--grey-4, #495057);
 }
