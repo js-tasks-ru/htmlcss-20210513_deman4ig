@@ -4,6 +4,7 @@
 .components-grid {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .components-grid__element {
