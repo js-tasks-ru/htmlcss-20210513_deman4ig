@@ -1,4 +1,9 @@
 .avatar {
+    width: 102px;
+    height: 102px;
+}
+
+.avatar__img {
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;
