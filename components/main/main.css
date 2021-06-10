@@ -1,4 +1,9 @@
 .main {
     background-color: var(--grey-1, #F8F9FA);
-    height: 1036px;
+    min-height: 1036px;
+}
+
+.main__inner {
+    /*margin: 0;*/
+    padding: 43px 0;
 }
