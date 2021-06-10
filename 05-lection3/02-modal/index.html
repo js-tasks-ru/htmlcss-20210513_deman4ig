@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <!-- Страница с модалкой -->
-<html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./modal.css">
-        <title>Modal</title>
-    </head>
-    <body>
-    </body>
-    <script src="./index.js"></script> 
+<html lang='ru'>
+<head>
+  <link href='../../assets/css/main.css'
+        rel='stylesheet'>
+  <link href='./modal.css'
+        rel='stylesheet'>
+  <link href='../../03-lection1/01-button/button.css'
+        rel='stylesheet'>
+  <title>Modal</title>
+  <meta charset='UTF-8'>
+  <style>
+      body {
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+  </style>
+</head>
+<body>
+  <button class='button button_primary'
+          id='modal-open'>Open modal
+  </button>
+  <div class='modal'
+       id='modal'>
+    <div class='modal__body'>
+      <div class='modal__heading'>Modal title</div>
+      <div class='modal__content'>Lorem ipsum dolor sit amet, consectetur
+                                  adipisicing elit. Accusantium adipisci,
+                                  aliquid cumque, distinctio doloremque
+                                  doloribus dolorum eaque error esse, eveniet
+                                  iste magni mollitia necessitatibus ratione
+                                  rem
+                                  repudiandae sapiente totam vitae.
+      </div>
+      <svg class='modal__close-icon'
+           id='modal-close'>
+        <use href='../../assets/images/sprites.svg#close-icon'></use>
+      </svg>
+    </div>
+  </div>
+</body>
+<script src='./index.js'></script>
 </html>
