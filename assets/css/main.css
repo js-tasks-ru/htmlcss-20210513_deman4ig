@@ -4,6 +4,7 @@
 @import '../../components/header/header.css';
 @import '../../components/main/main.css';
 @import '../../components/footer/footer.css';
+@import '../../components/components-grid/components-grid.css';
 
 :root {
     --white: #ffffff;
@@ -29,4 +30,5 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
