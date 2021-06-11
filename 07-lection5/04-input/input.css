@@ -48,18 +48,27 @@
     outline: none;
 }
 
-.input__field-icon {
+.input__icon {
     position: absolute;
     right: 16px;
     top: 16px;
     width: 24px;
     height: 24px;
+    display: none;
 }
 
-.input__field-icon_success {
+.input__icon_success {
     color: var(--success, #374FC7);
 }
 
-.input__field-icon_error {
+.input__icon_error {
     color: var(--error, #F03D3E);
+}
+
+.input__field_error ~ .input__icon_error {
+    display: block;
+}
+
+.input__field_success ~ .input__icon_success {
+    display: block;
 }
