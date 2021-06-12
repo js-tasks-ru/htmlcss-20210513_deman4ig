@@ -14,6 +14,10 @@
     transition: all 200ms ease-in-out;
 }
 
+.button_preview {
+    width: 100%;
+}
+
 .button_primary {
     background-color: var(--blue, #4263EB);
 }

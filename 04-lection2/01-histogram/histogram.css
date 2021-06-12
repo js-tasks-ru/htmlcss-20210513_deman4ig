@@ -8,6 +8,7 @@
     font-weight: normal;
     font-size: 1em;
     line-height: 1.5em;
+    width: 100%;
 }
 
 .histogram__inner {
