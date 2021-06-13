@@ -11,6 +11,8 @@
         rel='stylesheet'>
   <link href='../components/tabs/tabs.css'
         rel='stylesheet'>
+  <link rel='stylesheet'
+        href='../06-lection4/01-avatar/avatar.css'>
 </head>
 <body class='page'>
   <div class='template'>
@@ -63,8 +65,13 @@
         </ul>
       </div>
       <div class='template__component'>
-        <h3 class='template__component-heading'>Histogram</h3>
-        <div>Component</div>
+        <h3 class='template__component-heading'>Avatar</h3>
+        <div>
+          <div class='avatar'>
+            <img src='/06-lection4/01-avatar/public/avatar-200.jpg'
+                 alt='profile picture' class='avatar__img'>
+          </div>
+        </div>
         <div class='tabs'>
           <input checked
                  class='tabs__radio-input'
@@ -90,19 +97,26 @@
           </div>
 
           <div class='tabs__content tabs__content_html'>
-            <pre>
-              <code>
-&lt;div&gt;HTML&lt;/div&gt;
-              </code>
+            <pre class='tabs__code-snippet'>
+&lt;div class='avatar'&gt;
+  &lt;img src='/06-lection4/01-avatar/public/avatar-200.jpg' alt='profile picture' class='avatar__img'&gt;
+&lt;/div&gt;
             </pre>
           </div>
           <div class='tabs__content tabs__content_css'>
-            <pre>
-              <code>
-div {
-  color: red;
+            <pre class='tabs__code-snippet'>
+.avatar {
+  width: 102px;
+  height: 102px;
 }
-              </code>
+
+.avatar__img {
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
             </pre>
           </div>
         </div>

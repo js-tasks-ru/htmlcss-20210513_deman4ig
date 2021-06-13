@@ -33,6 +33,10 @@
     margin-top: 50px;
 }
 
+.tabs__code-snippet {
+    white-space: pre-wrap;
+}
+
 #html:checked ~ .tabs__content_css,
 #html:checked ~ .tabs__controls .tabs__item[for='css'] .tabs__underline {
     display: none;

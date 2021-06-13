@@ -11,6 +11,8 @@
         rel='stylesheet'>
   <link href='../components/tabs/tabs.css'
         rel='stylesheet'>
+  <link rel='stylesheet'
+        href='/04-lection2/02-skeleton/skeleton.css'>
 </head>
 <body class='page'>
   <div class='template'>
@@ -63,8 +65,22 @@
         </ul>
       </div>
       <div class='template__component'>
-        <h3 class='template__component-heading'>Histogram</h3>
-        <div>Component</div>
+        <h3 class='template__component-heading'>Skeleton</h3>
+        <div>
+          <div class='skeleton'>
+            <div class='skeleton__header'>
+              <div class='skeleton__avatar'></div>
+              <div class='skeleton__title'>
+                <div class='skeleton__line skeleton__line_w40'></div>
+                <div class='skeleton__line skeleton__line_w60 skeleton__line_mt05'></div>
+              </div>
+            </div>
+            <div class='skeleton__body'>
+              <div class='skeleton__line skeleton__line_w100'></div>
+              <div class='skeleton__line skeleton__line_w100 skeleton__line_mt05'></div>
+            </div>
+          </div>
+        </div>
         <div class='tabs'>
           <input checked
                  class='tabs__radio-input'
@@ -90,19 +106,78 @@
           </div>
 
           <div class='tabs__content tabs__content_html'>
-            <pre>
-              <code>
-&lt;div&gt;HTML&lt;/div&gt;
-              </code>
+            <pre class='tabs__code-snippet'>
+&lt;div class='skeleton'&gt;
+  &lt;div class='skeleton__header'&gt;
+    &lt;div class='skeleton__avatar'&gt;&lt;/div&gt;
+    &lt;div class='skeleton__title'&gt;
+      &lt;div class='skeleton__line skeleton__line_w40'&gt;&lt;/div&gt;
+      &lt;div class='skeleton__line skeleton__line_w60 skeleton__line_mt05'&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class='skeleton__body'&gt;
+    &lt;div class='skeleton__line skeleton__line_w100'&gt;&lt;/div&gt;
+    &lt;div class='skeleton__line skeleton__line_w100 skeleton__line_mt05'&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
             </pre>
           </div>
           <div class='tabs__content tabs__content_css'>
-            <pre>
-              <code>
-div {
-  color: red;
+            <pre class='tabs__code-snippet'>
+.skeleton {
+  border: 1px solid var(--grey-3, #ACB5BD);
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 24px;
 }
-              </code>
+
+.skeleton__header {
+  display: flex;
+}
+
+.skeleton__body {
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skeleton__avatar {
+  background-color: var(--grey-2, #DDE2E5);
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+}
+
+.skeleton__title {
+  width: 100%;
+  padding-left: 1em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skeleton__line {
+  height: 1.25em;
+  background: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
+}
+
+.skeleton__line_mt05 {
+  margin-top: .5em;
+}
+
+.skeleton__line_w40 {
+  width: 40%;
+}
+
+.skeleton__line_w60 {
+  width: 60%;
+}
+
+.skeleton__line_w100 {
+  width: 100%;
+}
             </pre>
           </div>
         </div>

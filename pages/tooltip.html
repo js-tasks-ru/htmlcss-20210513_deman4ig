@@ -11,6 +11,8 @@
         rel='stylesheet'>
   <link href='../components/tabs/tabs.css'
         rel='stylesheet'>
+  <link rel='stylesheet'
+        href='/05-lection3/01-tooltip/tooltip.css'>
 </head>
 <body class='page'>
   <div class='template'>
@@ -63,8 +65,15 @@
         </ul>
       </div>
       <div class='template__component'>
-        <h3 class='template__component-heading'>Histogram</h3>
-        <div>Component</div>
+        <h3 class='template__component-heading'>Tooltip</h3>
+        <div>
+          <div class='tooltip'>
+            <svg class='tooltip__trigger'>
+              <use href='../../assets/images/sprites.svg#help'></use>
+            </svg>
+            <div class='tooltip__body'>Help</div>
+          </div>
+        </div>
         <div class='tabs'>
           <input checked
                  class='tabs__radio-input'
@@ -90,19 +99,60 @@
           </div>
 
           <div class='tabs__content tabs__content_html'>
-            <pre>
-              <code>
-&lt;div&gt;HTML&lt;/div&gt;
-              </code>
+            <pre class='tabs__code-snippet'>
+&lt;div class='tooltip'&gt;
+  &lt;svg class='tooltip__trigger'&gt;
+    &lt;use href='../../assets/images/sprites.svg#help'&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+  &lt;div class='tooltip__body'&gt;Help&lt;/div&gt;
+&lt;/div&gt;
             </pre>
           </div>
           <div class='tabs__content tabs__content_css'>
-            <pre>
-              <code>
-div {
-  color: red;
+            <pre class='tabs__code-snippet'>
+.tooltip {
+  position: relative;
+  display: inline-flex;
 }
-              </code>
+
+.tooltip__trigger {
+  color: var(--black, #212429);
+  width: 24px;
+  height: 24px;
+}
+
+.tooltip__body {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  padding: 13px 21px;
+  background-color: var(--blue, #4263EB);
+  box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
+  border-radius: 10px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--grey-2, #DDE2E5);
+  display: none;
+}
+
+.tooltip__body::before {
+  content: "";
+  border: 10px solid transparent;
+  border-top: 8px solid var(--blue, #4263EB);
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%);
+}
+
+.tooltip__trigger:hover~.tooltip__body {
+  display: block;
+}
             </pre>
           </div>
         </div>

@@ -11,6 +11,10 @@
         rel='stylesheet'>
   <link href='../components/tabs/tabs.css'
         rel='stylesheet'>
+  <link rel='stylesheet'
+        href='/05-lection3/02-modal/modal.css'>
+  <link rel='stylesheet'
+        href='/03-lection1/01-button/button.css'>
 </head>
 <body class='page'>
   <div class='template'>
@@ -63,8 +67,30 @@
         </ul>
       </div>
       <div class='template__component'>
-        <h3 class='template__component-heading'>Histogram</h3>
-        <div>Component</div>
+        <h3 class='template__component-heading'>Modal</h3>
+        <div>
+          <button class='button button_primary'
+                  id='modal-open'>Open modal
+          </button>
+          <div class='modal'
+               id='modal'>
+            <div class='modal__body'>
+              <div class='modal__heading'>Modal title</div>
+              <div class='modal__content'>Lorem ipsum dolor sit amet, consectetur
+                                          adipisicing elit. Accusantium adipisci,
+                                          aliquid cumque, distinctio doloremque
+                                          doloribus dolorum eaque error esse, eveniet
+                                          iste magni mollitia necessitatibus ratione
+                                          rem
+                                          repudiandae sapiente totam vitae.
+              </div>
+              <svg class='modal__close-icon'
+                   id='modal-close'>
+                <use href='../../assets/images/sprites.svg#close-icon'></use>
+              </svg>
+            </div>
+          </div>
+        </div>
         <div class='tabs'>
           <input checked
                  class='tabs__radio-input'
@@ -90,19 +116,98 @@
           </div>
 
           <div class='tabs__content tabs__content_html'>
-            <pre>
-              <code>
-&lt;div&gt;HTML&lt;/div&gt;
-              </code>
+            <pre class='tabs__code-snippet'>
+&lt;div class='modal' id='modal'&gt;
+  &lt;div class='modal__body'&gt;
+    &lt;div class='modal__heading'&gt;Modal title&lt;/div&gt;
+    &lt;div class='modal__content'&gt;Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Accusantium adipisci,
+      aliquid cumque, distinctio doloremque
+      doloribus dolorum eaque error esse, eveniet
+      iste magni mollitia necessitatibus ratione
+      rem
+      repudiandae sapiente totam vitae.
+    &lt;/div&gt;
+    &lt;svg class='modal__close-icon' id='modal-close'&gt;
+      &lt;use href='../../assets/images/sprites.svg#close-icon'&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+  (function() {
+    const close = document.getElementById('modal-close');
+    const modal = document.getElementById('modal');
+    const modalOpen = document.getElementById('modal-open');
+
+    if (!close || !modalOpen || !modal) {
+      return;
+    }
+
+    modalOpen.addEventListener('click', () =&gt; {
+      modal.style.display = 'flex';
+      document.body.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', () =&gt; {
+      modal.style.display = 'none';
+      document.body.overflow = 'initial';
+    });
+  })();
+&lt;/script&gt;
             </pre>
           </div>
           <div class='tabs__content tabs__content_css'>
-            <pre>
-              <code>
-div {
-  color: red;
+            <pre class='tabs__code-snippet'>
+.modal {
+  background-color: #C4C4C450;
+  /*padding: 40px;*/
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
 }
-              </code>
+
+.modal__body {
+  background: var(--white, #FFF);
+  border-radius: 8px;
+  padding: 40px;
+  position: relative;
+  max-width: 428px;
+  max-height: 294px;
+}
+
+.modal__heading {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #334D6E;
+  margin-bottom: 14px;
+}
+
+.modal__content {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-4, #495057);
+}
+
+.modal__close-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
             </pre>
           </div>
         </div>
@@ -113,4 +218,5 @@ div {
     </footer>
   </div>
 </body>
+<script src='/05-lection3/02-modal/index.js'></script>
 </html>
