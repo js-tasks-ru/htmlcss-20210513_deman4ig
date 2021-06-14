@@ -11,7 +11,7 @@
 }
 
 .toggler__wrapper {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     cursor: pointer;
 }
@@ -55,7 +55,7 @@
 
 .toggler__input:checked ~ .toggler__wrapper .toggler__checkmark {
     background-color: var(--white, #FFF);
-    transform: translateX(97%);
+    transform: translateX(23px);
 }
 
 .toggler__input:disabled ~ .toggler__wrapper {
