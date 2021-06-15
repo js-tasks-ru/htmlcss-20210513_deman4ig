@@ -1,8 +1,12 @@
 @import '../logo/logo.css';
 @import '../navigation/navigation.css';
 
+.header {
+    background-color: var(--white, #FFF);
+}
+
 .header__inner {
-    margin: 24px 0 77px;
+    padding: 24px 0 77px;
 }
 
 .header__nav-bar {

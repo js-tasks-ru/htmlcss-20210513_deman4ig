@@ -1,0 +1,12 @@
+@import "../card/card.css";
+
+.components-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.components-layout__element {
+    margin: 15px;
+    width: calc(33% - 30px);
+}
