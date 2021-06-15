@@ -1,9 +1,4 @@
-.input {
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    appearance: none;
-}
+.input {}
 
 .input__label {
     font-weight: 500;
@@ -30,6 +25,10 @@
     line-height: 26px;
     color: var(--grey-4, #495057);
     height: 56px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    appearance: none;
 }
 
 .input__field_error {
