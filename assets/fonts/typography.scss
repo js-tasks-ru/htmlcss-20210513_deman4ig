@@ -1,0 +1,68 @@
+$color: var(--black, #212429);
+$fontFamily: "Inter, sans-serif";
+$mobileBreakpoint: 767px;
+
+@mixin typography {
+  color: $color;
+  font-family: $fontFamily;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  @include typography;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 64px;
+
+  @media screen and (max-width: $mobileBreakpoint) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+h2 {
+  font-family: $fontFamily;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 48px;
+  color: $color;
+
+  @media screen and (max-width: $mobileBreakpoint){
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+h3 {
+  @include typography;
+  font-size: 28px;
+  line-height: 38px;
+
+  @media screen and (max-width: $mobileBreakpoint) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+h4 {
+  @include typography;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+p {
+  @include typography;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.small-text {
+  @include typography;
+  font-size: 14px;
+  line-height: 22px;
+}
