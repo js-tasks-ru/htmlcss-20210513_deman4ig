@@ -1,3 +1,7 @@
+.footer {
+    background-color: var(--white, #FFF);
+}
+
 .footer__heading {
     font-family: Inter, sans-serif;
     font-style: normal;
