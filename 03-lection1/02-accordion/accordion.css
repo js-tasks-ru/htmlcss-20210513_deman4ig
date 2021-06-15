@@ -6,6 +6,11 @@
     border-radius: 8px;
     padding: 24px 32px;
     margin-bottom: 8px;
+    width: 100%;
+}
+
+.accordion_preview {
+    width: 100%;
 }
 
 .accordion:last-of-type {
