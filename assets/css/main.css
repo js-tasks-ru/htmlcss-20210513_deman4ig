@@ -50,5 +50,5 @@
 html,
 body {
     height: 100%;
->>>>>>> a368c43b07b3b9dbbb407fdb55acada5b6c15001
+    padding-left: calc(100vw - 100%);
 }
