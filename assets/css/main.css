@@ -35,8 +35,9 @@
     --grey-3: #ACB5BD;
     --grey-4: #495057;
 
-    --error: var(--red);
-    --success: var(--blue);
+    --error: #F03D3E;
+    --error-secondary: #F03D3E10;
+    --success: #374FC7;
 
     --primary: var(--blue);
     --secondary: var(--purple);
