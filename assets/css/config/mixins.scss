@@ -1,0 +1,14 @@
+@mixin typography($heading) {
+  @if ($heading == h1 or $heading == h2) {
+    font-weight: 500;
+  } @else {
+    font-weight: normal;
+  }
+  color: var(--black, #212429);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+}
+
+@mixin mobileBreakpoint {
+  @media screen and (max-width: var(--mobileBreakpoint)) { @content; }
+}

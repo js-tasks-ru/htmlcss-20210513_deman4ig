@@ -1,6 +1,7 @@
 /* Style reset */
 @import '../../node_modules/normalize.css/normalize.css';
 @import '../fonts/fonts.css';
+@import '../fonts/typography.scss';
 
 /* Page layout */
 @import '../../components/page/page.css';
@@ -41,6 +42,8 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+    --mobileBreakpoint: 767px;
 }
 
 * {

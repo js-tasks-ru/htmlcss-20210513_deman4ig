@@ -1,0 +1,56 @@
+@import '../css/config/mixins.scss';
+
+h1 {
+    @include typography(h1);
+    font-size: 50px;
+    line-height: 64px;
+
+    @include mobileBreakpoint {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+h2 {
+    @include typography(h2);
+    font-size: 38px;
+    line-height: 48px;
+
+    @include mobileBreakpoint {
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+h3 {
+    @include typography(h3);
+    font-size: 28px;
+    line-height: 38px;
+
+    @include mobileBreakpoint {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+h4 {
+    @include typography(h4);
+    font-size: 20px;
+    line-height: 26px;
+}
+
+p {
+    @include typography(p);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.small-text {
+    @include typography(small-text);
+    font-size: 14px;
+    line-height: 22px;
+}
