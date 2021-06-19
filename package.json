@@ -4,7 +4,7 @@
   "description": "Course Materials",
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js",
-    "build": "postcss ./assets/css/main.css -o build/index.css",
+    "build": "postcss ./assets/css/main.css -o build/style.css",
     "linter": "stylelint --fix **/*.scss"
   },
   "husky": {
