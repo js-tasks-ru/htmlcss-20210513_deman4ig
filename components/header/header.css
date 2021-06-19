@@ -12,6 +12,7 @@
 .header__nav-bar {
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 }
 
 .header__heading {

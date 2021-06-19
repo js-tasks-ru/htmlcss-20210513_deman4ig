@@ -11,6 +11,8 @@
         rel='stylesheet'>
   <link href='../components/tabs/tabs.css'
         rel='stylesheet'>
+  <link href='../03-lection1/02-accordion/accordion.css'
+        rel='stylesheet'>
 </head>
 <body class='page'>
   <div class='template'>
@@ -41,7 +43,8 @@
           <li class='template__sidebar-item'><a class='template__sidebar-link'
                                                 href='/pages/avatar.html'>Avatar</a></li>
           <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/buttons.html'>Buttons</a></li>
+                                                href='/pages/buttons.html'>Buttons</a>
+          </li>
           <li class='template__sidebar-item'><a class='template__sidebar-link'
                                                 href='/pages/calendar.html'>Calendar
           </a></li>
@@ -59,12 +62,27 @@
                                                 href='/pages/skeleton.html'>Skeleton
           </a></li>
           <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/tooltip.html'>Tooltip</a></li>
+                                                href='/pages/tooltip.html'>Tooltip</a>
+          </li>
         </ul>
       </div>
       <div class='template__component'>
-        <h3 class='template__component-heading'>Histogram</h3>
-        <div>Component</div>
+        <h3 class='template__component-heading'>Accordion</h3>
+        <div>
+          <details class='accordion'>
+            <summary class='accordion__summary'>Accordion Item
+              <svg class='accordion__icon'>
+                <use href='../../assets/images/sprites.svg#dropdown-arrow'></use>
+              </svg>
+            </summary>
+            <p class='accordion__content'>Amet minim mollit non deserunt ullamco est sit
+                                          aliqua
+                                          dolor do amet sint. Velit officia
+                                          consequat duis enim velit mollit. Exercitation
+                                          veniam
+                                          consequat sunt nostrud amet.</p>
+          </details>
+        </div>
         <div class='tabs'>
           <input checked
                  class='tabs__radio-input'
@@ -90,19 +108,79 @@
           </div>
 
           <div class='tabs__content tabs__content_html'>
-            <pre>
-              <code>
-&lt;div&gt;HTML&lt;/div&gt;
-              </code>
+            <pre class='tabs__code-snippet'>
+&lt;details class='accordion'&gt;
+  &lt;summary class='accordion__summary'&gt;Accordion Item
+    &lt;svg class='accordion__icon'&gt;
+      &lt;use href='../../assets/images/sprites.svg#dropdown-arrow'&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+  &lt;/summary&gt;
+  &lt;p class='accordion__content'&gt;Amet minim mollit non deserunt ullamco est sit aliqua
+    dolor do amet sint. Velit officia
+    consequat duis enim velit mollit. Exercitation veniam
+    consequat sunt nostrud amet.&lt;/p&gt;
+&lt;/details&gt;
             </pre>
           </div>
           <div class='tabs__content tabs__content_css'>
-            <pre>
-              <code>
-div {
-  color: red;
+            <pre class='tabs__code-snippet'>
+.accordion {
+  background: var(--white, white);
+  border: 1px solid var(--grey-3, grey);
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 24px 32px;
+  margin-bottom: 8px;
 }
-              </code>
+
+.accordion:last-of-type {
+  margin-bottom: 0;
+}
+
+.accordion__summary {
+  list-style: none;
+}
+
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__summary {
+  position: relative;
+  color: var(--black, black);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__icon {
+  width: 26px;
+  height: 26px;
+  color: var(--grey-4, #495057);
+  transition: all 200ms ease-in-out;
+}
+
+.accordion[open] .accordion__icon {
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  margin: 16px 0 0 0;
+  color: var(--grey-4, grey);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 200ms ease-in-out;
+  cursor: default;
+}
             </pre>
           </div>
         </div>
