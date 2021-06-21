@@ -32,26 +32,26 @@
     <h1>Reusable component library</h1>
   </div>
   <div class='tabs'>
-    <input type='radio' name='tabs' id='tab0' checked>
-    <input type='radio' name='tabs' id='tab1'>
-    <input type='radio' name='tabs' id='tab2'>
+    <input class='tabs__radio-input' type='radio' name='tabs' id='tab0' checked>
+    <input class='tabs__radio-input' type='radio' name='tabs' id='tab1'>
+    <input class='tabs__radio-input' type='radio' name='tabs' id='tab2'>
     <nav class='tabs__nav'>
       <div class='page__box'>
         <ul class='tabs__nav-wrapper'>
-          <li>
-            <label for='tab0' class='tabs__nav-item'>All</label>
+          <li class='tabs__nav-item'>
+            <label for='tab0' class='tabs__nav-label tabs__nav-label_tab0'>All</label>
           </li>
-          <li>
-            <label for='tab1' class='tabs__nav-item'>Elements</label>
+          <li class='tabs__nav-item'>
+            <label for='tab1' class='tabs__nav-label tabs__nav-label_tab1'>Elements</label>
           </li>
-          <li>
-            <label for='tab2' class='tabs__nav-item'>Containers</label>
+          <li class='tabs__nav-item'>
+            <label for='tab2' class='tabs__nav-label tabs__nav-label_tab2'>Containers</label>
           </li>
         </ul>
       </div>
     </nav>
     <div class='tabs__divider'></div>
-    <section class='tabs__content-wrapper'>
+    <section class='tabs__content-wrapper tabs__content-wrapper_bg'>
       <div class='page__box'>
         <div class='components-layout tabs__content-tab tabs__content-tab_tab0'>
           <div class='components-layout__element card'>

@@ -1,5 +1,5 @@
 .tabs__radio-input {
-    appearance: none;
+    display: none;
 }
 
 .tabs__controls {
@@ -47,15 +47,11 @@
     display: none;
 }
 
-.tabs input[type=radio] {
-    display: none;
-}
-
 .tabs__nav-wrapper {
     display: flex;
 }
 
-.tabs__nav-wrapper > li {
+.tabs__nav-item {
     margin-right: 40px;
 }
 
@@ -63,18 +59,23 @@
     margin-right: 0;
 }
 
-.tabs__nav-item {
+.tabs__nav-label {
     display: inline-flex;
     position: relative;
     padding: .5rem 0;
     border-bottom: 5px solid transparent;
 }
 
-.tabs__nav-item p {
+.tabs__nav-label {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
     color: var(--grey-3, #ACB5BD);
 }
 
-.tabs__nav-item::after {
+.tabs__nav-label::after {
     content: '';
     width: 100%;
     height: 5px;
@@ -91,7 +92,7 @@
     background-color: var(--grey-2, #DDE2E5);
 }
 
-.tabs__content-wrapper {
+.tabs__content-wrapper_bg {
     background-color: var(--page-background, #F9FAFC);
 }
 
@@ -99,11 +100,11 @@
     display: none;
 }
 
-#tab0:checked ~ .tabs__nav .tabs__nav-item[for=tab0] p {
+#tab0:checked ~ .tabs__nav .tabs__nav-label_tab0 {
     color: var(--black, #212429);
 }
 
-#tab0:checked ~ .tabs__nav .tabs__nav-item[for=tab0]::after {
+#tab0:checked ~ .tabs__nav .tabs__nav-label_tab0::after {
     transform: scaleX(1);
 }
 
@@ -111,11 +112,11 @@
     display: flex;
 }
 
-#tab1:checked ~ .tabs__nav .tabs__nav-item[for=tab1] p {
+#tab1:checked ~ .tabs__nav .tabs__nav-label_tab1 {
     color: var(--black, #212429);
 }
 
-#tab1:checked ~ .tabs__nav .tabs__nav-item[for=tab1]::after {
+#tab1:checked ~ .tabs__nav .tabs__nav-label_tab1::after {
     transform: scaleX(1);
 }
 
@@ -123,11 +124,11 @@
     display: flex;
 }
 
-#tab2:checked ~ .tabs__nav .tabs__nav-item[for=tab2] p {
+#tab2:checked ~ .tabs__nav .tabs__nav-label_tab2 {
     color: var(--black, #212429);
 }
 
-#tab2:checked ~ .tabs__nav .tabs__nav-item[for=tab2]::after {
+#tab2:checked ~ .tabs__nav .tabs__nav-label_tab2::after {
     transform: scaleX(1);
 }
 
