@@ -1,7 +1,8 @@
 /* Style reset */
+@import './reset.css';
 @import '../../node_modules/normalize.css/normalize.css';
 @import '../fonts/fonts.css';
-@import '../fonts/typography.scss';
+@import '../fonts/typography.css';
 
 /* Page layout */
 @import '../../components/page/page.css';
@@ -20,6 +21,7 @@
 @import '../../05-lection3/02-modal/modal.css';
 @import '../../05-lection3/03-calendar/calendar.css';
 @import '../../06-lection4/01-avatar/avatar.css';
+@import '../../components/tabs/tabs.css';
 
 :root {
     --white: #ffffff;
@@ -35,6 +37,7 @@
     --grey-2: #DDE2E5;
     --grey-3: #ACB5BD;
     --grey-4: #495057;
+    --page-background: #F9FAFC;
 
     --error: #F03D3E;
     --error-secondary: #F03D3E10;
@@ -56,6 +59,11 @@ body {
     height: 100%;
 }
 
+html {
+    overflow: auto;
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+}
+
 body {
-    width: 100vw;
 }

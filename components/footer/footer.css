@@ -1,28 +1,17 @@
 .footer {
-    background-color: var(--white, #FFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__heading {
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 48px;
-    color: var(--black, #212429);
     text-align: center;
 }
 
 .footer__summary {
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
     text-align: center;
-    color: var(--black, #212429);
 }
 
 .footer__inner {
     padding: 72px 0 136px;
-    width: 640px;
 }

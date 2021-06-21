@@ -1,9 +1,16 @@
-.main {
-    background-color: var(--grey-1, #F8F9FA);
-    min-height: 1036px;
+.main-page {
+    display: flex;
+    flex-direction: column;
 }
 
-.main__inner {
-    /*margin: 0;*/
-    padding: 43px 0;
+.main-page__header {
+    flex-grow: 0;
+}
+
+.main-page__main {
+    flex-grow: 1;
+}
+
+.main-page__footer {
+    flex-grow: 0;
 }
