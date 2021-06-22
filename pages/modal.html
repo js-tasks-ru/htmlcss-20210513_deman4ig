@@ -11,15 +11,14 @@
         rel='stylesheet'>
   <link href='../components/tabs/tabs.css'
         rel='stylesheet'>
-  <link rel='stylesheet'
-        href='/05-lection3/02-modal/modal.css'>
-  <link rel='stylesheet'
-        href='/03-lection1/01-button/button.css'>
+  <link rel='stylesheet' href='../05-lection3/02-modal/modal.css'>
+  <link rel='stylesheet' href='../07-lection5/04-input/input.css'>
 </head>
 <body class='page'>
-  <div class='template'>
-    <header class='template__header'>
-      <div class='page__box'>
+<div class='template'>
+  <header class='template__header'>
+    <div class='page__box'>
+      <div class='header__inner'>
         <div class='header__nav-bar'>
           <svg class='logo'>
             <use href='../../assets/images/sprites.svg#logo'></use>
@@ -34,89 +33,105 @@
           </nav>
         </div>
       </div>
-    </header>
-    <main class='template__main page__box'>
-      <div class='template__sidebar'>
-        <h4 class='template__sidebar-heading'>Components</h4>
-        <ul class='template__sidebar-links'>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/accordion.html'>Accordion
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/avatar.html'>Avatar</a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/buttons.html'>Buttons</a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/calendar.html'>Calendar
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/form-elements.html'>Custom
-                                                                                 form
-                                                                                 elements
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/histogram.html'>Histogram
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/modal.html'>Modal</a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/skeleton.html'>Skeleton
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/tooltip.html'>Tooltip</a></li>
-        </ul>
-      </div>
-      <div class='template__component'>
-        <h3 class='template__component-heading'>Modal</h3>
-        <div>
-          <button class='button button_primary'
-                  id='modal-open'>Open modal
-          </button>
-          <div class='modal'
-               id='modal'>
-            <div class='modal__body'>
-              <div class='modal__heading'>Modal title</div>
-              <div class='modal__content'>Lorem ipsum dolor sit amet, consectetur
-                                          adipisicing elit. Accusantium adipisci,
-                                          aliquid cumque, distinctio doloremque
-                                          doloribus dolorum eaque error esse, eveniet
-                                          iste magni mollitia necessitatibus ratione
-                                          rem
-                                          repudiandae sapiente totam vitae.
-              </div>
-              <svg class='modal__close-icon'
-                   id='modal-close'>
-                <use href='../../assets/images/sprites.svg#close-icon'></use>
-              </svg>
+    </div>
+  </header>
+  <main class='page__box template__main'>
+    <div class='template__sidebar'>
+      <h4 class='template__sidebar-heading'>Components</h4>
+      <ul class='template__sidebar-links'>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/accordion.html'>Accordion
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/avatar.html'>Avatar</a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/buttons.html'>Buttons</a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/calendar.html'>Calendar
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/form-elements.html'>Custom
+          form
+          elements
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/histogram.html'>Histogram
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/modal.html'>Modal</a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/skeleton.html'>Skeleton
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/tooltip.html'>Tooltip</a></li>
+      </ul>
+    </div>
+    <div class='template__component'>
+      <h3 class='template__component-heading'>Modal</h3>
+      <div class='template__component-preview'>
+        <button class='button button_primary'
+                id='modal-open'>Open modal
+        </button>
+        <div class='modal'
+             id='modal'>
+          <div class='modal__body'>
+            <div class='modal__heading'>Modal title</div>
+            <div class='modal__content'>
+              <form action='/#'>
+                <label class='input'>
+                  <h5 class='input__label'>Name</h5>
+                  <div class='input__field-wrapper'>
+                    <input class='input__field'
+                           placeholder='Name'
+                           type='text'>
+                  </div>
+                </label>
+                <label class='input'>
+                  <h5 class='input__label'>Email</h5>
+                  <div class='input__field-wrapper'>
+                    <input class='input__field'
+                           placeholder='Email'
+                           type='text'>
+                  </div>
+                </label>
+                <button type='submit' class='button button_primary'>Submit</button>
+              </form>
             </div>
+            <button class='modal__close-button' id='modal-close'>
+              <svg class='modal__close-icon'>
+                <use href='/assets/images/sprites.svg#close-icon'></use>
+              </svg>
+            </button>
           </div>
         </div>
-        <div class='tabs'>
-          <input checked
-                 class='tabs__radio-input'
-                 id='html'
-                 name='code'
-                 type='radio'>
-          <input class='tabs__radio-input'
-                 id='css'
-                 name='code'
-                 type='radio'>
-
-          <div class='tabs__controls'>
-            <label class='tabs__item'
-                   for='html'>
-              <p>HTML</p>
-              <div class='tabs__underline'></div>
-            </label>
-            <label class='tabs__item'
-                   for='css'>
-              <p>CSS</p>
-              <div class='tabs__underline'></div>
-            </label>
+      </div>
+      <div class='tabs'>
+        <input checked
+               class='tabs__radio-input'
+               id='tab0'
+               name='code'
+               type='radio'>
+        <input class='tabs__radio-input'
+               id='tab1'
+               name='code'
+               type='radio'>
+        <nav class='tabs__nav'>
+          <div class='page__box'>
+            <ul class='tabs__nav-wrapper'>
+              <li class='tabs__nav-item'>
+                <label for='tab0' class='tabs__nav-label tabs__nav-label_tab0'>HTML</label>
+              </li>
+              <li class='tabs__nav-item'>
+                <label for='tab1' class='tabs__nav-label tabs__nav-label_tab1'>CSS</label>
+              </li>
+            </ul>
           </div>
-
-          <div class='tabs__content tabs__content_html'>
-            <pre class='tabs__code-snippet'>
+        </nav>
+        <div class='tabs__divider'></div>
+        <section class='tabs__content-wrapper'>
+          <div class='tabs__content-tab tabs__content-tab_tab0'>
+              <pre class='template__component-code'>
+                <code>
 &lt;div class='modal' id='modal'&gt;
   &lt;div class='modal__body'&gt;
     &lt;div class='modal__heading'&gt;Modal title&lt;/div&gt;
@@ -155,10 +170,12 @@
     });
   })();
 &lt;/script&gt;
-            </pre>
+                </code>
+              </pre>
           </div>
-          <div class='tabs__content tabs__content_css'>
-            <pre class='tabs__code-snippet'>
+          <div class='tabs__content-tab tabs__content-tab_tab1'>
+              <pre class='template__component-code'>
+                <code>
 .modal {
   background-color: #C4C4C450;
   /*padding: 40px;*/
@@ -208,15 +225,17 @@
   height: 16px;
   cursor: pointer;
 }
-            </pre>
+                </code>
+              </pre>
           </div>
-        </div>
+        </section>
       </div>
-    </main>
-    <footer class='template__footer'>
-      <h5 class='template__footer-heading'>Reusable component library</h5>
-    </footer>
-  </div>
+    </div>
+  </main>
+  <footer class='template__footer'>
+    <h5 class='template__footer-heading'>Reusable component library</h5>
+  </footer>
+</div>
 </body>
 <script src='/05-lection3/02-modal/index.js'></script>
 </html>

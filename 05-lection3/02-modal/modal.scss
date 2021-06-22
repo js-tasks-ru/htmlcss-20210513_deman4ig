@@ -10,6 +10,7 @@
   left: 0;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 
   &__body {
     background: var(--white, #FFF);
