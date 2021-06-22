@@ -10,6 +10,23 @@
     grid-gap: 30px;
 }
 
+.component-preview__flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.component-preview__flex_gap-16px {
+    gap: 16px;
+}
+
+.component-preview__flex_gap-30px {
+    gap: 30px;
+}
+
+.component-preview__flex-item:last-child {
+    margin-bottom: 0;
+}
+
 .component-preview__grid_2by2 {
     grid-template-columns: repeat(2, 350px);
     grid-template-rows: repeat(2, auto);

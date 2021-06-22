@@ -7,8 +7,10 @@
   <link href='../components/template/template.css' rel='stylesheet'>
   <link href='../components/navigation/navigation.css' rel='stylesheet'>
   <link href='../components/tabs/tabs.css' rel='stylesheet'>
-  <link rel='stylesheet' href='07-lection5/01-checkbox/checkbox.css'>
-  <link rel='stylesheet' href='07-lection5/02-radio/radio.css'>
+  <link rel='stylesheet' href='../07-lection5/01-checkbox/checkbox.css'>
+  <link rel='stylesheet' href='../07-lection5/02-radio/radio.css'>
+  <link rel='stylesheet' href='../07-lection5/03-toggler/toggler.css'>
+  <link rel='stylesheet' href='../components/component-preview/component-preview.css'>
 </head>
 <body class='page'>
 <div class='template'>
@@ -65,7 +67,119 @@
     <div class='template__component'>
       <h3 class='template__component-heading'>Custom form elements</h3>
       <div class='template__component-preview'>
-
+        <div class='component-preview component-preview__flex_gap-30px'>
+          <div class='component-preview__flex component-preview__flex_gap-16px'>
+            <label class='checkbox'>
+              <input class='checkbox__input'
+                     type='checkbox'>
+              <div class='checkbox__wrapper'>
+                <div class='checkbox__control'>
+                  <svg class='checkbox__icon'>
+                    <use xlink:href='/assets/images/sprites.svg#checkbox-checked'></use>
+                  </svg>
+                </div>
+                <p class='checkbox__label'>Default</p>
+              </div>
+            </label>
+            <label class='checkbox'>
+              <input checked
+                     class='checkbox__input'
+                     type='checkbox'>
+              <div class='checkbox__wrapper'>
+                <div class='checkbox__control'>
+                  <svg class='checkbox__icon'>
+                    <use xlink:href='/assets/images/sprites.svg#checkbox-checked'></use>
+                  </svg>
+                </div>
+                <p class='checkbox__label'>Checked</p>
+              </div>
+            </label>
+            <label class='checkbox'>
+              <input class='checkbox__input'
+                     disabled
+                     type='checkbox'>
+              <div class='checkbox__wrapper'>
+                <div class='checkbox__control'>
+                  <svg class='checkbox__icon'>
+                    <use xlink:href='/assets/images/sprites.svg#checkbox-checked'></use>
+                  </svg>
+                </div>
+                <p class='checkbox__label'>Disabled</p>
+              </div>
+            </label>
+          </div>
+          <div class='component-preview__flex component-preview__flex_gap-16px'>
+            <label class='radio'>
+              <input class='radio__input'
+                     name='radio'
+                     type='radio'>
+              <div class='radio__wrapper'>
+                <div class='radio__control'>
+                  <div class='radio__checkmark'></div>
+                </div>
+                <p class='radio__label'>Default</p>
+              </div>
+            </label>
+            <label class='radio'>
+              <input checked
+                     class='radio__input'
+                     name='radio'
+                     type='radio'>
+              <div class='radio__wrapper'>
+                <div class='radio__control'>
+                  <div class='radio__checkmark'></div>
+                </div>
+                <p class='radio__label'>Selected</p>
+              </div>
+            </label>
+            <label class='radio'>
+              <input class='radio__input'
+                     disabled
+                     name='radio'
+                     type='radio'>
+              <div class='radio__wrapper'>
+                <div class='radio__control'>
+                  <div class='radio__checkmark'></div>
+                </div>
+                <p class='radio__label'>Disabled</p>
+              </div>
+            </label>
+          </div>
+          <div class='component-preview__flex component-preview__flex_gap-16px'>
+            <label class='toggler'>
+              <input class='toggler__input'
+                     type='checkbox'>
+              <div class='toggler__wrapper'>
+                <div class='toggler__control'>
+                  <div class='toggler__checkmark'></div>
+                </div>
+                <p class='toggler__label'>Off</p>
+              </div>
+            </label>
+            <label class='toggler'>
+              <input checked
+                     class='toggler__input'
+                     type='checkbox'>
+              <div class='toggler__wrapper'>
+                <div class='toggler__control'>
+                  <div class='toggler__checkmark'></div>
+                </div>
+                <p class='toggler__label'>On</p>
+              </div>
+            </label>
+            <label class='toggler'>
+              <input class='toggler__input'
+                     disabled
+                     type='checkbox'>
+              <div class='toggler__wrapper'>
+                <div class='toggler__control'>
+                  <div class='toggler__checkmark'></div>
+                </div>
+                <p class='toggler__label'>Disabled</p>
+              </div>
+            </label>
+          </div>
+        </div>
       </div>
       <div class='tabs'>
         <input checked
@@ -93,16 +207,273 @@
         <section class='tabs__content-wrapper'>
           <div class='tabs__content-tab tabs__content-tab_tab0'>
               <pre class='template__component-code'>
+                <h4>Checkbox</h4>
                 <code>
-&lt;div&gt;HTML&lt;/div&gt;
+&lt;label class='checkbox'&gt;
+  &lt;input class='checkbox__input' type='checkbox'&gt;
+  &lt;div class='checkbox__wrapper'&gt;
+    &lt;div class='checkbox__control'&gt;
+      &lt;svg class='checkbox__icon'&gt;
+        &lt;use xlink:href='/assets/images/sprites.svg#checkbox-checked'&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;p class='checkbox__label'&gt;Default&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+                </code>
+              </pre>
+            <pre class='template__component-code'>
+                <h4>Radio</h4>
+                <code>
+&lt;label class='radio'&gt;
+  &lt;input class='radio__input' name='radio' type='radio'&gt;
+  &lt;div class='radio__wrapper'&gt;
+    &lt;div class='radio__control'&gt;
+      &lt;div class='radio__checkmark'&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class='radio__label'&gt;Default&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+                </code>
+              </pre>
+            <pre class='template__component-code'>
+                <h4>Toggler</h4>
+                <code>
+&lt;label class='toggler'&gt;
+  &lt;input class='toggler__input' type='checkbox'&gt;
+  &lt;div class='toggler__wrapper'&gt;
+    &lt;div class='toggler__control'&gt;
+      &lt;div class='toggler__checkmark'&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class='toggler__label'&gt;Off&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
                 </code>
               </pre>
           </div>
           <div class='tabs__content-tab tabs__content-tab_tab1'>
               <pre class='template__component-code'>
+                <h4>Checkbox</h4>
                 <code>
-div {
-  color: red;
+.checkbox__input {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  outline: none;
+}
+
+.checkbox__wrapper {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox__control {
+  width: 28px;
+  height: 28px;
+  background: var(--white, #FFF);
+  border: 1px solid var(--grey-2, #DDE2E5);
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+}
+
+.checkbox__label {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-4, #495057);
+  margin: 0 0 0 12px;
+}
+
+.checkbox__icon {
+  display: none;
+  width: 15px;
+  height: 14px;
+  color: var(--white, #FFF);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox__input:checked~.checkbox__wrapper .checkbox__control {
+  background-color: var(--blue, #4263EB);
+  border-color: var(--blue, #4263EB);
+}
+
+.checkbox__input:checked~.checkbox__wrapper .checkbox__icon {
+  display: block;
+}
+
+.checkbox__input:disabled~.checkbox__wrapper {
+  pointer-events: none;
+  cursor: default;
+}
+
+.checkbox__input:disabled~.checkbox__wrapper .checkbox__control {
+  background-color: var(--grey-2, #DDE2E5);
+}
+
+.checkbox__input:disabled~.checkbox__wrapper .checkbox__label {
+  color: var(--grey-2, #DDE2E5);
+}
+                </code>
+              </pre>
+            <pre class='template__component-code'>
+              <h4>Radio</h4>
+                <code>
+.radio__input {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  outline: none;
+  pointer-events: none;
+}
+
+.radio__wrapper {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio__control {
+  width: 28px;
+  height: 28px;
+  background: var(--white, #FFF);
+  border: 1px solid var(--grey-2, #DDE2E5);
+  box-sizing: border-box;
+  border-radius: 14px;
+  position: relative;
+}
+
+.radio__label {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-4, #495057);
+  margin: 0 0 0 12px;
+}
+
+.radio__checkmark {
+  background-color: var(--blue, #4263EB);
+  width: 18px;
+  height: 18px;
+  border-radius: 14px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio__input:checked~.radio__wrapper .radio__control {
+  border-color: var(--blue, #4263EB);
+}
+
+.radio__input:checked~.radio__wrapper .radio__checkmark {
+  display: block;
+}
+
+.radio__input:disabled~.radio__wrapper .radio__control {
+  background-color: var(--grey-2, #DDE2E5);
+}
+
+.radio__input:disabled~.radio__wrapper .radio__label {
+  color: var(--grey-2, #DDE2E5);
+}
+
+.radio__input:disabled~.radio__wrapper {
+  cursor: default;
+  pointer-events: none;
+}
+                </code>
+              </pre>
+            <pre class='template__component-code'>
+              <h4>Toggler</h4>
+                <code>
+.toggler {}
+
+.toggler__input {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  outline: none;
+}
+
+.toggler__wrapper {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggler__control {
+  width: 52px;
+  height: 28px;
+  background: var(--white, #FFF);
+  border: 1px solid var(--grey-2, #DDE2E5);
+  box-sizing: border-box;
+  border-radius: 16px;
+  position: relative;
+  transition: background-color .4s;
+}
+
+.toggler__checkmark {
+  width: 24px;
+  height: 24px;
+  background: var(--grey-2, #DDE2E5);
+  border-radius: 16px;
+  position: absolute;
+  left: 2px;
+  top: calc(50% - 24px/2);
+  transition: all .4s;
+}
+
+.toggler__label {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-4, #495057);
+  margin: 0 0 0 12px;
+}
+
+.toggler__input:checked~.toggler__wrapper .toggler__control {
+  background-color: var(--blue, #4263EB);
+  border-color: var(--blue, #4263EB);
+}
+
+.toggler__input:checked~.toggler__wrapper .toggler__checkmark {
+  background-color: var(--white, #FFF);
+  transform: translateX(23px);
+}
+
+.toggler__input:disabled~.toggler__wrapper {
+  pointer-events: none;
+  cursor: default;
+}
+
+.toggler__input:disabled~.toggler__wrapper .toggler__control {
+  background-color: var(--grey-2, #DDE2E5);
+}
+
+.toggler__input:disabled~.toggler__wrapper .toggler__checkmark {
+  background-color: var(--grey-3, #ACB5BD);
+  opacity: 25%;
+}
+
+.toggler__input:disabled~.toggler__wrapper .toggler__label {
+  color: var(--grey-2, #DDE2E5);
 }
                 </code>
               </pre>
