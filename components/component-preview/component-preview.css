@@ -15,11 +15,11 @@
     flex-direction: column;
 }
 
-.component-preview__flex_gap-16px {
+.component-preview__flex_gap-sm {
     gap: 16px;
 }
 
-.component-preview__flex_gap-30px {
+.component-preview__flex_gap-md {
     gap: 30px;
 }
 
