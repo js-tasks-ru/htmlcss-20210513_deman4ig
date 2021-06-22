@@ -13,6 +13,7 @@
 
 .input__field-wrapper {
     position: relative;
+    margin-bottom: 16px;
 }
 
 .input__field {

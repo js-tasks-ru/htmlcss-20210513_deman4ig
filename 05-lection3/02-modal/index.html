@@ -8,39 +8,47 @@
         rel='stylesheet'>
   <link href='../../03-lection1/01-button/button.css'
         rel='stylesheet'>
+  <link rel='stylesheet' href='../../components/component-preview/component-preview.css'>
+  <link rel='stylesheet' href='../../07-lection5/04-input/input.css'>
   <title>Modal</title>
   <meta charset='UTF-8'>
-  <style>
-      body {
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-  </style>
 </head>
-<body>
-  <button class='button button_primary'
-          id='modal-open'>Open modal
-  </button>
-  <div class='modal'
-       id='modal'>
-    <div class='modal__body'>
-      <div class='modal__heading'>Modal title</div>
-      <div class='modal__content'>Lorem ipsum dolor sit amet, consectetur
-                                  adipisicing elit. Accusantium adipisci,
-                                  aliquid cumque, distinctio doloremque
-                                  doloribus dolorum eaque error esse, eveniet
-                                  iste magni mollitia necessitatibus ratione
-                                  rem
-                                  repudiandae sapiente totam vitae.
-      </div>
-      <svg class='modal__close-icon'
-           id='modal-close'>
-        <use href='../../assets/images/sprites.svg#close-icon'></use>
-      </svg>
+<body class='component-preview'>
+<button class='button button_primary'
+        id='modal-open'>Open modal
+</button>
+<div class='modal'
+     id='modal'>
+  <div class='modal__body'>
+    <div class='modal__heading'>Modal title</div>
+    <div class='modal__content'>
+      <form action='/#'>
+        <label class='input'>
+          <h5 class='input__label'>Name</h5>
+          <div class='input__field-wrapper'>
+            <input class='input__field'
+                   placeholder='Name'
+                   type='text'>
+          </div>
+        </label>
+        <label class='input'>
+          <h5 class='input__label'>Email</h5>
+          <div class='input__field-wrapper'>
+            <input class='input__field'
+                   placeholder='Email'
+                   type='text'>
+          </div>
+        </label>
+        <button type='submit' class='button button_primary'>Submit</button>
+      </form>
     </div>
+    <button class='modal__close-button' id='modal-close'>
+      <svg class='modal__close-icon'>
+        <use href='/assets/images/sprites.svg#close-icon'></use>
+      </svg>
+    </button>
   </div>
+</div>
 </body>
 <script src='./index.js'></script>
 </html>
