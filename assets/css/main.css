@@ -9,6 +9,7 @@
 @import '../../components/header/header.css';
 @import '../../components/main/main.css';
 @import '../../components/footer/footer.css';
+@import '../../components/component-preview/component-preview.css';
 
 /* Components */
 @import '../../components/components-layout/components-layout.css';
@@ -22,6 +23,10 @@
 @import '../../05-lection3/03-calendar/calendar.css';
 @import '../../06-lection4/01-avatar/avatar.css';
 @import '../../components/tabs/tabs.css';
+@import '../../07-lection5/01-checkbox/checkbox.css';
+@import '../../07-lection5/02-radio/radio.css';
+@import '../../07-lection5/03-toggler/toggler.css';
+@import '../../07-lection5/04-input/input.css';
 
 :root {
     --white: #ffffff;
