@@ -11,13 +11,12 @@
         rel='stylesheet'>
   <link href='../components/tabs/tabs.css'
         rel='stylesheet'>
-  <link rel='stylesheet'
-        href='../06-lection4/01-avatar/avatar.css'>
 </head>
 <body class='page'>
-  <div class='template'>
-    <header class='template__header'>
-      <div class='page__box'>
+<div class='template'>
+  <header class='template__header'>
+    <div class='page__box'>
+      <div class='header__inner'>
         <div class='header__nav-bar'>
           <svg class='logo'>
             <use href='../../assets/images/sprites.svg#logo'></use>
@@ -32,79 +31,83 @@
           </nav>
         </div>
       </div>
-    </header>
-    <main class='template__main page__box'>
-      <div class='template__sidebar'>
-        <h4 class='template__sidebar-heading'>Components</h4>
-        <ul class='template__sidebar-links'>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/accordion.html'>Accordion
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/avatar.html'>Avatar</a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/buttons.html'>Buttons</a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/calendar.html'>Calendar
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/form-elements.html'>Custom
-                                                                                 form
-                                                                                 elements
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/histogram.html'>Histogram
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/modal.html'>Modal</a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/skeleton.html'>Skeleton
-          </a></li>
-          <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                                href='/pages/tooltip.html'>Tooltip</a></li>
-        </ul>
-      </div>
-      <div class='template__component'>
-        <h3 class='template__component-heading'>Avatar</h3>
-        <div>
-          <div class='avatar'>
-            <img src='/06-lection4/01-avatar/public/avatar-200.jpg'
-                 alt='profile picture' class='avatar__img'>
-          </div>
+    </div>
+  </header>
+  <main class='template__main page__box'>
+    <div class='template__sidebar'>
+      <h4 class='template__sidebar-heading'>Components</h4>
+      <ul class='template__sidebar-links'>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/accordion.html'>Accordion
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/avatar.html'>Avatar</a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/buttons.html'>Buttons</a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/calendar.html'>Calendar
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/form-elements.html'>Custom
+          form
+          elements
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/histogram.html'>Histogram
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/modal.html'>Modal</a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/skeleton.html'>Skeleton
+        </a></li>
+        <li class='template__sidebar-item'><a class='template__sidebar-link'
+                                              href='/pages/tooltip.html'>Tooltip</a></li>
+      </ul>
+    </div>
+    <div class='template__component'>
+      <h3 class='template__component-heading'>Avatar</h3>
+      <div class='template__component-preview'>
+        <div class='avatar'>
+          <img src='/06-lection4/01-avatar/public/avatar-200.jpg'
+               alt='profile picture' class='avatar__img'>
         </div>
-        <div class='tabs'>
-          <input checked
-                 class='tabs__radio-input'
-                 id='html'
-                 name='code'
-                 type='radio'>
-          <input class='tabs__radio-input'
-                 id='css'
-                 name='code'
-                 type='radio'>
-
-          <div class='tabs__controls'>
-            <label class='tabs__item'
-                   for='html'>
-              <p>HTML</p>
-              <div class='tabs__underline'></div>
-            </label>
-            <label class='tabs__item'
-                   for='css'>
-              <p>CSS</p>
-              <div class='tabs__underline'></div>
-            </label>
+      </div>
+      <div class='tabs'>
+        <input checked
+               class='tabs__radio-input'
+               id='tab0'
+               name='code'
+               type='radio'>
+        <input class='tabs__radio-input'
+               id='tab1'
+               name='code'
+               type='radio'>
+        <nav class='tabs__nav'>
+          <div class='page__box'>
+            <ul class='tabs__nav-wrapper'>
+              <li class='tabs__nav-item'>
+                <label for='tab0' class='tabs__nav-label tabs__nav-label_tab0'>HTML</label>
+              </li>
+              <li class='tabs__nav-item'>
+                <label for='tab1' class='tabs__nav-label tabs__nav-label_tab1'>CSS</label>
+              </li>
+            </ul>
           </div>
-
-          <div class='tabs__content tabs__content_html'>
-            <pre class='tabs__code-snippet'>
+        </nav>
+        <div class='tabs__divider'></div>
+        <section class='tabs__content-wrapper'>
+          <div class='tabs__content-tab tabs__content-tab_tab0'>
+              <pre class='template__component-code'>
+                <code>
 &lt;div class='avatar'&gt;
   &lt;img src='/06-lection4/01-avatar/public/avatar-200.jpg' alt='profile picture' class='avatar__img'&gt;
 &lt;/div&gt;
-            </pre>
+                </code>
+              </pre>
           </div>
-          <div class='tabs__content tabs__content_css'>
-            <pre class='tabs__code-snippet'>
+          <div class='tabs__content-tab tabs__content-tab_tab1'>
+              <pre class='template__component-code'>
+                <code>
 .avatar {
   width: 102px;
   height: 102px;
@@ -117,14 +120,16 @@
   width: 100%;
   height: 100%;
 }
-            </pre>
+                </code>
+              </pre>
           </div>
-        </div>
+        </section>
       </div>
-    </main>
-    <footer class='template__footer'>
-      <h5 class='template__footer-heading'>Reusable component library</h5>
-    </footer>
-  </div>
+    </div>
+  </main>
+  <footer class='template__footer'>
+    <h5 class='template__footer-heading'>Reusable component library</h5>
+  </footer>
+</div>
 </body>
 </html>

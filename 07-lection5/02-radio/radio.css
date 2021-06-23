@@ -20,9 +20,7 @@
     border: 1px solid var(--grey-2, #DDE2E5);
     box-sizing: border-box;
     border-radius: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
 .radio__label {
@@ -41,6 +39,10 @@
     height: 18px;
     border-radius: 14px;
     display: none;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
 
 .radio__input:checked ~ .radio__wrapper .radio__control {

@@ -71,7 +71,15 @@
     line-height: 38px;
     color: var(--grey-4, #495057);
     margin-top: 0;
-    margin-bottom: 24px;
+}
+
+.template__component-preview {
+    margin: 24px 0;
+}
+
+.template__component-code {
+    margin-top: 35px;
+    white-space: pre-wrap;
 }
 
 .template__footer {

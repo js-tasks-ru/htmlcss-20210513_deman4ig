@@ -4,9 +4,12 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+    padding: 43px 0;
 }
 
 .components-layout__element {
+    min-height: 300px;
     margin: 15px;
-    width: calc(33% - 30px);
+    width: calc(100%/3 - 30px);
 }
+

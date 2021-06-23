@@ -6,6 +6,7 @@
     flex-direction: column;
     padding: 32px 25px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 .card__body {
@@ -21,14 +22,13 @@
 }
 
 .card__title {
-    margin-bottom: 0;
+    margin: 25px 0 0;
     font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
     line-height: 25px;
     text-align: center;
-    color: var(--black, #212429);
 }
 
 .card__subtitle {
