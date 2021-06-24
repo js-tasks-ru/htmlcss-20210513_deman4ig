@@ -1,5 +1,5 @@
 .modal {
-  background-color: var(--grey-5, #C4C4C450);
+  font-size: 1rem;
   display: none;
   position: fixed;
   top: 0;
@@ -9,26 +9,32 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  background-color: var(--grey-5, #C4C4C450);
+}
+.modal_preview {
+  display: flex;
+  position: static;
+  padding: 10px;
+  font-size: 0.75rem;
 }
 .modal__body {
   background: var(--white, #FFF);
-  border-radius: 8px;
-  padding: 40px;
+  border-radius: var(--border-radius);
+  padding: 2.5em;
   position: relative;
 }
 .modal__heading {
-  font-weight: normal;
+  font-weight: 600;
   color: var(--black, #212429);
   font-family: Inter, sans-serif;
   font-style: normal;
+  font-size: 1.25em;
+  line-height: 1.5em;
   color: var(--secondary-blue, #334D6E);
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
 }
 .modal__content {
-  font-weight: normal;
+  font-weight: regular;
   color: var(--black, #212429);
   font-family: Inter, sans-serif;
   font-style: normal;

@@ -1,8 +1,10 @@
-@mixin typography($heading) {
-  @if ($heading == h1 or $heading == h2) {
-    font-weight: 500;
-  } @else {
+$mobileBreakpoint: 767px;
+
+@mixin typography($font-weight) {
+  @if ($font-weight == normal) {
     font-weight: normal;
+  } @else {
+    font-weight: $font-weight;
   }
   color: var(--black, #212429);
   font-family: Inter, sans-serif;
@@ -10,5 +12,10 @@
 }
 
 @mixin mobileBreakpoint {
-  @media screen and (max-width: var(--mobileBreakpoint)) { @content; }
+  @media screen and (max-width: #{$mobileBreakpoint}) { @content; }
+}
+
+@mixin fontSize($font-size, $line-height) {
+  font-size: #{$font-size};
+  line-height: #{$line-height};
 }

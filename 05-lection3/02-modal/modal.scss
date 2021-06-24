@@ -1,7 +1,8 @@
 @import '../../assets/css/config/mixins.scss';
 
 .modal {
-  background-color: var(--grey-5, #C4C4C450);
+  font-size: 1rem;
+
   display: none;
   position: fixed;
   top: 0;
@@ -12,24 +13,31 @@
   align-items: center;
   z-index: 1;
 
+  background-color: var(--grey-5, #C4C4C450);
+
+  &_preview {
+    display: flex;
+    position: static;
+    padding: 10px;
+    font-size: .75rem;
+  }
+
   &__body {
     background: var(--white, #FFF);
-    border-radius: 8px;
-    padding: 40px;
+    border-radius: var(--border-radius);
+    padding: 2.5em;
     position: relative;
   }
 
   &__heading {
-    @include typography(h4);
+    @include typography(600);
+    @include fontSize(1.25em, 1.5em);
     color: var(--secondary-blue, #334D6E);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 14px;
+    margin-bottom: .875rem;
   }
 
   &__content {
-    @include typography(p);
+    @include typography(regular);
     color: var(--grey-4, #495057);
   }
 
