@@ -1,0 +1,50 @@
+@import '../../assets/css/config/mixins';
+
+.button {
+  @include typography(500);
+  @include fontSize(16px, 19px);
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  color: var(--white, white);
+
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 16px 64px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out, border 200ms ease-in-out;
+
+  &_primary {
+    background-color: var(--blue, #4263EB);
+
+    &:hover {
+      background-color: var(--dark-blue, #2342C0);
+    }
+  }
+
+  &_secondary {
+    background-color: var(--purple, #7048E8);
+
+    &:hover {
+      background-color: var(--dark-purple, #5028C6);
+    }
+  }
+
+  &_alternate {
+    color: var(--grey-4, grey);
+    border: 1px solid var(--grey-3, grey);
+    background-color: var(--white);
+
+    &:hover {
+      border-color: var(--black);
+    }
+  }
+
+  &_disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  &_preview {
+    width: 100%;
+  }
+}

@@ -33,7 +33,9 @@
     --black: #212429;
     --pink: #F784AD;
     --purple: #7048E8;
+    --dark-purple: #5028C6;
     --blue: #4263EB;
+    --dark-blue: #2342C0;
     --light-blue: #A0B1F520;
     --secondary-blue: #334D6E;
     --light-secondary-blue: #90A0B7;
@@ -53,6 +55,8 @@
     --secondary: var(--purple);
 
     --mobileBreakpoint: 767px;
+
+    --border-radius: 8px;
 }
 
 * {
