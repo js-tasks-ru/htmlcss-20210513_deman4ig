@@ -1,0 +1,8 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+
+    &_flex-grow {
+        flex-grow: 1;
+    }
+}

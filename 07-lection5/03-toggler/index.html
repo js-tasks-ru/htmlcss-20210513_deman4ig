@@ -7,27 +7,9 @@
   <link href='./toggler.css'
         rel='stylesheet'>
   <meta charset='UTF-8'>
-  <style>
-      html,
-      body {
-          height: 100%;
-      }
-
-      body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-
-      body > div {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-      }
-  </style>
 </head>
-<body>
-  <div>
+<body class='component-preview'>
+  <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
     <label class='toggler'>
       <input class='toggler__input'
              type='checkbox'>
@@ -35,7 +17,6 @@
         <div class='toggler__control'>
           <div class='toggler__checkmark'></div>
         </div>
-        <p class='toggler__label'>Off</p>
       </div>
     </label>
     <label class='toggler'>
@@ -46,7 +27,6 @@
         <div class='toggler__control'>
           <div class='toggler__checkmark'></div>
         </div>
-        <p class='toggler__label'>On</p>
       </div>
     </label>
     <label class='toggler'>
@@ -57,7 +37,6 @@
         <div class='toggler__control'>
           <div class='toggler__checkmark'></div>
         </div>
-        <p class='toggler__label'>Disabled</p>
       </div>
     </label>
   </div>

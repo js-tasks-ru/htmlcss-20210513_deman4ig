@@ -3,14 +3,7 @@
 <head>
   <meta charset='UTF-8'>
   <title>Component page</title>
-  <link href='../assets/css/main.css'
-        rel='stylesheet'>
-  <link href='../components/template/template.css'
-        rel='stylesheet'>
-  <link href='../components/navigation/navigation.css'
-        rel='stylesheet'>
-  <link href='../components/tabs/tabs.css'
-        rel='stylesheet'>
+  <link href='../build/style.css' rel='stylesheet'>
 </head>
 <body class='page'>
 <div class='template'>
@@ -67,11 +60,13 @@
     <div class='template__component'>
       <h3 class='template__component-heading'>Tooltip</h3>
       <div class='template__component-preview'>
-        <div class='tooltip'>
-          <svg class='tooltip__trigger'>
-            <use href='../../assets/images/sprites.svg#help'></use>
-          </svg>
-          <div class='tooltip__body'>Help</div>
+        <div class='component-preview'>
+          <div class='tooltip'>
+            <svg class='tooltip__trigger'>
+              <use href='../../assets/images/sprites.svg#help'></use>
+            </svg>
+            <div class='tooltip__body tooltip__body_preview'>Help</div>
+          </div>
         </div>
       </div>
       <div class='tabs'>

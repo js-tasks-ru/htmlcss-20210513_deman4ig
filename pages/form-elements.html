@@ -3,14 +3,7 @@
 <head>
   <meta charset='UTF-8'>
   <title>Component page</title>
-  <link href='../assets/css/main.css' rel='stylesheet'>
-  <link href='../components/template/template.css' rel='stylesheet'>
-  <link href='../components/navigation/navigation.css' rel='stylesheet'>
-  <link href='../components/tabs/tabs.css' rel='stylesheet'>
-  <link rel='stylesheet' href='../07-lection5/01-checkbox/checkbox.css'>
-  <link rel='stylesheet' href='../07-lection5/02-radio/radio.css'>
-  <link rel='stylesheet' href='../07-lection5/03-toggler/toggler.css'>
-  <link rel='stylesheet' href='../components/component-preview/component-preview.css'>
+  <link href='../build/style.css' rel='stylesheet'>
 </head>
 <body class='page'>
 <div class='template'>
@@ -67,8 +60,8 @@
     <div class='template__component'>
       <h3 class='template__component-heading'>Custom form elements</h3>
       <div class='template__component-preview'>
-        <div class='component-preview component-preview__flex_gap-md'>
-          <div class='component-preview__flex component-preview__flex_gap-sm'>
+        <div class='component-preview component-preview_gap-md'>
+          <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
             <label class='checkbox'>
               <input class='checkbox__input'
                      type='checkbox'>
@@ -108,7 +101,7 @@
               </div>
             </label>
           </div>
-          <div class='component-preview__flex component-preview__flex_gap-sm'>
+          <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
             <label class='radio'>
               <input class='radio__input'
                      name='radio'
@@ -145,7 +138,7 @@
               </div>
             </label>
           </div>
-          <div class='component-preview__flex component-preview__flex_gap-sm'>
+          <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
             <label class='toggler'>
               <input class='toggler__input'
                      type='checkbox'>
@@ -153,7 +146,6 @@
                 <div class='toggler__control'>
                   <div class='toggler__checkmark'></div>
                 </div>
-                <p class='toggler__label'>Off</p>
               </div>
             </label>
             <label class='toggler'>
@@ -164,7 +156,6 @@
                 <div class='toggler__control'>
                   <div class='toggler__checkmark'></div>
                 </div>
-                <p class='toggler__label'>On</p>
               </div>
             </label>
             <label class='toggler'>
@@ -175,9 +166,7 @@
                 <div class='toggler__control'>
                   <div class='toggler__checkmark'></div>
                 </div>
-                <p class='toggler__label'>Disabled</p>
               </div>
-            </label>
           </div>
         </div>
       </div>
