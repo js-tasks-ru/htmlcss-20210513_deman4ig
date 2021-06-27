@@ -6,8 +6,8 @@
   <meta charset='UTF-8'>
   <title>Reusable component library</title>
 </head>
-<body class='main-page'>
-<header class='header main-page__header'>
+<body class='home-page'>
+<header class='header'>
   <div class='page__box'>
     <div class='header__inner'>
       <div class='header__nav-bar'>
@@ -26,7 +26,7 @@
     </div>
   </div>
 </header>
-<main class='main-page__main'>
+<main class='home-page_flex-grow'>
   <div class='page__box'>
     <h1>Reusable component library</h1>
   </div>
@@ -52,23 +52,23 @@
     <div class='tabs__divider'></div>
     <section class='tabs__content-wrapper tabs__content-wrapper_bg'>
       <div class='page__box'>
-        <div class='components-layout tabs__content-tab tabs__content-tab_tab0'>
-          <a class='components-layout__element card' href='/pages/tooltip.html'>
+        <div class='flex-grid tabs__content-tab tabs__content-tab_tab0'>
+          <a class='flex-grid__item card' href='/pages/tooltip.html'>
             <div class='card__body'>
               <div class='tooltip'>
                 <svg class='tooltip__trigger'>
                   <use href='assets/images/sprites.svg#help'></use>
                 </svg>
-                <div class='tooltip__body'>Help</div>
+                <div class='tooltip__body tooltip__body_preview'>Help</div>
               </div>
             </div>
             <p class='card__title'>Tooltip</p>
             <p class='card__subtitle'>Container</p>
           </a>
-          <a class='components-layout__element card' href='/pages/form-elements.html'>
+          <a class='flex-grid__item card' href='/pages/form-elements.html'>
             <div class='card__body'>
-              <div class='component-preview component-preview__flex_gap-md'>
-                <div class='component-preview__flex component-preview__flex_gap-sm'>
+              <div class='component-preview component-preview_gap-md'>
+                <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
                   <label class='checkbox'>
                     <input class='checkbox__input'
                            type='checkbox'>
@@ -108,7 +108,7 @@
                     </div>
                   </label>
                 </div>
-                <div class='component-preview__flex component-preview__flex_gap-sm'>
+                <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
                   <label class='radio'>
                     <input class='radio__input'
                            name='radio'
@@ -150,7 +150,7 @@
             <p class='card__title'>Custom form elements</p>
             <p class='card__subtitle'>Element</p>
           </a>
-          <a class='components-layout__element card' href='/pages/calendar.html'>
+          <a class='flex-grid__item card' href='/pages/calendar.html'>
             <div class='card__body'>
               <div class='calendar'>
                 <div class='calendar__heading'>June 2021</div>
@@ -205,7 +205,7 @@
             <p class='card__title'>Calendar</p>
             <p class='card__subtitle'>Container</p>
           </a>
-          <a class='components-layout__element card' href='/pages/modal.html'>
+          <a class='flex-grid__item card' href='/pages/modal.html'>
             <div class='card__body'>
               <div class='modal modal_preview'>
                 <div class='modal__body'>
@@ -231,7 +231,7 @@
                       <button type='submit' class='button button_primary'>Submit</button>
                     </form>
                   </div>
-                  <button class='modal__close-button' id='modal-close'>
+                  <button class='modal__close-button'>
                     <svg class='modal__close-icon'>
                       <use href='/assets/images/sprites.svg#close-icon'></use>
                     </svg>
@@ -242,7 +242,7 @@
             <p class='card__title'>Modal dialog</p>
             <p class='card__subtitle'>Container</p>
           </a>
-          <a class='components-layout__element card' href='/pages/histogram.html'>
+          <a class='flex-grid__item card' href='/pages/histogram.html'>
             <div class='card__body'>
               <div class='histogram histogram_preview'>
                 <div class='histogram__inner'>
@@ -349,27 +349,29 @@
             <p class='card__title'>Histogram</p>
             <p class='card__subtitle'>Element</p>
           </a>
-          <a class='components-layout__element card' href='/pages/avatar.html'>
+          <a class='flex-grid__item card' href='/pages/avatar.html'>
             <div class='card__body'>
               <div class='avatar'>
                 <img alt='profile picture'
-                     class='avatar__img'
+                     class='avatar__image'
                      src='06-lection4/01-avatar/public/avatar-200.jpg'>
               </div>
             </div>
             <p class='card__title'>Avatar</p>
             <p class='card__subtitle'>Element</p>
           </a>
-          <a class='components-layout__element card' href='/pages/buttons.html'>
+          <a class='flex-grid__item card' href='/pages/buttons.html'>
             <div class='card__body card__body_gap'>
-              <button class='button button_primary button_preview'>Primary</button>
-              <button class='button button_secondary button_preview'>Secondary</button>
-              <button class='button button_alternate button_preview'>Alternate</button>
+              <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
+                <button class='button button_primary button_preview'>Primary</button>
+                <button class='button button_secondary button_preview'>Secondary</button>
+                <button class='button button_alternate button_preview'>Alternate</button>
+              </div>
             </div>
             <p class='card__title'>Buttons</p>
             <p class='card__subtitle'>Element</p>
           </a>
-          <a class='components-layout__element card' href='/pages/accordion.html'>
+          <a class='flex-grid__item card' href='/pages/accordion.html'>
             <div class='card__body'>
               <details class='accordion accordion_preview'>
                 <summary class='accordion__summary'>Accordion Item
@@ -388,19 +390,19 @@
             <p class='card__title'>Accordion</p>
             <p class='card__subtitle'>Container</p>
           </a>
-          <a class='components-layout__element card' href='/pages/skeleton.html'>
+          <a class='flex-grid__item card' href='/pages/skeleton.html'>
             <div class='card__body'>
               <div class='skeleton skeleton_preview'>
                 <div class='skeleton__header'>
                   <div class='skeleton__avatar'></div>
                   <div class='skeleton__title'>
-                    <div class='skeleton__line skeleton__line_w40'></div>
-                    <div class='skeleton__line skeleton__line_w60 skeleton__line_mt05'></div>
+                    <div class='skeleton__line skeleton__line_short'></div>
+                    <div class='skeleton__line skeleton__line_medium skeleton__line_top-margin'></div>
                   </div>
                 </div>
                 <div class='skeleton__body'>
-                  <div class='skeleton__line skeleton__line_w100'></div>
-                  <div class='skeleton__line skeleton__line_w100 skeleton__line_mt05'></div>
+                  <div class='skeleton__line skeleton__line_long'></div>
+                  <div class='skeleton__line skeleton__line_long skeleton__line_top-margin'></div>
                 </div>
               </div>
             </div>
@@ -408,23 +410,23 @@
             <p class='card__subtitle'>Container</p>
           </a>
         </div>
-        <div class='components-layout tabs__content-tab tabs__content-tab_tab1'>
-          <a class='components-layout__element card' href='/pages/tooltip.html'>
+        <div class='flex-grid tabs__content-tab tabs__content-tab_tab1'>
+          <a class='flex-grid__item card' href='/pages/tooltip.html'>
             <div class='card__body'>
               <div class='tooltip'>
                 <svg class='tooltip__trigger'>
                   <use href='assets/images/sprites.svg#help'></use>
                 </svg>
-                <div class='tooltip__body'>Help</div>
+                <div class='tooltip__body tooltip__body_preview'>Help</div>
               </div>
             </div>
             <p class='card__title'>Tooltip</p>
             <p class='card__subtitle'>Container</p>
           </a>
-          <a class='components-layout__element card' href='/pages/form-elements.html'>
+          <a class='flex-grid__item card' href='/pages/form-elements.html'>
             <div class='card__body'>
-              <div class='component-preview component-preview__flex_gap-md'>
-                <div class='component-preview__flex component-preview__flex_gap-sm'>
+              <div class='component-preview component-preview_gap-md'>
+                <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
                   <label class='checkbox'>
                     <input class='checkbox__input'
                            type='checkbox'>
@@ -464,7 +466,7 @@
                     </div>
                   </label>
                 </div>
-                <div class='component-preview__flex component-preview__flex_gap-sm'>
+                <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
                   <label class='radio'>
                     <input class='radio__input'
                            name='radio'
@@ -506,29 +508,31 @@
             <p class='card__title'>Custom form elements</p>
             <p class='card__subtitle'>Element</p>
           </a>
-          <a class='components-layout__element card' href='/pages/avatar.html'>
+          <a class='flex-grid__item card' href='/pages/avatar.html'>
             <div class='card__body'>
               <div class='avatar'>
                 <img alt='profile picture'
-                     class='avatar__img'
+                     class='avatar__image'
                      src='06-lection4/01-avatar/public/avatar-200.jpg'>
               </div>
             </div>
             <p class='card__title'>Avatar</p>
             <p class='card__subtitle'>Element</p>
           </a>
-          <a class='components-layout__element card' href='/pages/buttons.html'>
+          <a class='flex-grid__item card' href='/pages/buttons.html'>
             <div class='card__body card__body_gap'>
-              <button class='button button_primary button_preview'>Primary</button>
-              <button class='button button_secondary button_preview'>Secondary</button>
-              <button class='button button_alternate button_preview'>Alternate</button>
+              <div class='component-preview component-preview_flex-col component-preview_gap-sm'>
+                <button class='button button_primary button_preview'>Primary</button>
+                <button class='button button_secondary button_preview'>Secondary</button>
+                <button class='button button_alternate button_preview'>Alternate</button>
+              </div>
             </div>
             <p class='card__title'>Buttons</p>
             <p class='card__subtitle'>Element</p>
           </a>
         </div>
-        <div class='components-layout tabs__content-tab tabs__content-tab_tab2'>
-          <a class='components-layout__element card' href='/pages/calendar.html'>
+        <div class='flex-grid tabs__content-tab tabs__content-tab_tab2'>
+          <a class='flex-grid__item card' href='/pages/calendar.html'>
             <div class='card__body'>
               <div class='calendar'>
                 <div class='calendar__heading'>June 2021</div>
@@ -583,7 +587,7 @@
             <p class='card__title'>Calendar</p>
             <p class='card__subtitle'>Container</p>
           </a>
-          <a class='components-layout__element card' href='/pages/modal.html'>
+          <a class='flex-grid__item card' href='/pages/modal.html'>
             <div class='card__body'>
               <div class='modal modal_preview'>
                 <div class='modal__body'>
@@ -609,7 +613,7 @@
                       <button type='submit' class='button button_primary'>Submit</button>
                     </form>
                   </div>
-                  <button class='modal__close-button' id='modal-close'>
+                  <button class='modal__close-button'>
                     <svg class='modal__close-icon'>
                       <use href='/assets/images/sprites.svg#close-icon'></use>
                     </svg>
@@ -620,7 +624,7 @@
             <p class='card__title'>Modal dialog</p>
             <p class='card__subtitle'>Container</p>
           </a>
-          <a class='components-layout__element card' href='/pages/histogram.html'>
+          <a class='flex-grid__item card' href='/pages/histogram.html'>
             <div class='card__body'>
               <div class='histogram histogram_preview'>
                 <div class='histogram__inner'>
@@ -727,7 +731,7 @@
             <p class='card__title'>Histogram</p>
             <p class='card__subtitle'>Element</p>
           </a>
-          <a class='components-layout__element card' href='/pages/accordion.html'>
+          <a class='flex-grid__item card' href='/pages/accordion.html'>
             <div class='card__body'>
               <details class='accordion accordion_preview'>
                 <summary class='accordion__summary'>Accordion Item
@@ -746,19 +750,19 @@
             <p class='card__title'>Accordion</p>
             <p class='card__subtitle'>Container</p>
           </a>
-          <a class='components-layout__element card' href='/pages/skeleton.html'>
+          <a class='flex-grid__item card' href='/pages/skeleton.html'>
             <div class='card__body'>
               <div class='skeleton skeleton_preview'>
                 <div class='skeleton__header'>
                   <div class='skeleton__avatar'></div>
                   <div class='skeleton__title'>
-                    <div class='skeleton__line skeleton__line_w40'></div>
-                    <div class='skeleton__line skeleton__line_w60 skeleton__line_mt05'></div>
+                    <div class='skeleton__line skeleton__line_short'></div>
+                    <div class='skeleton__line skeleton__line_medium skeleton__line_top-margin'></div>
                   </div>
                 </div>
                 <div class='skeleton__body'>
-                  <div class='skeleton__line skeleton__line_w100'></div>
-                  <div class='skeleton__line skeleton__line_w100 skeleton__line_mt05'></div>
+                  <div class='skeleton__line skeleton__line_long'></div>
+                  <div class='skeleton__line skeleton__line_long skeleton__line_top-margin'></div>
                 </div>
               </div>
             </div>
@@ -770,7 +774,7 @@
     </section>
   </div>
 </main>
-<footer class='footer main-page__footer'>
+<footer class='footer'>
   <div class='footer__inner page__box'>
     <h2 class='footer__heading'>About</h2>
     <p class='footer__summary'>This project is a collection of professionally designed, pre-built, fully responsive HTML

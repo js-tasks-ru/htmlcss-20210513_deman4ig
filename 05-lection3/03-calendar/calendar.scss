@@ -1,0 +1,63 @@
+@import "../../assets/css/config/mixins";
+
+.calendar {
+  background: var(--white, #FFF);
+  border: 1px solid var(--grey-3, #ACB5BD);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  padding: 28px 36px;
+
+  &__wrapper {
+    position: relative;
+    padding-bottom: 100%;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  &__heading {
+    @include typography(600);
+    @include fontSize(1.25rem, 1.5rem);
+    display: flex;
+    justify-content: center;
+    color: var(--secondary-blue, #334D6E);
+    margin-bottom: 1.5rem;
+  }
+
+  &__item {
+    @include fontSize(1rem, 1.25rem);
+    //font-weight: normal;
+    //font-style: normal;
+    font-family: Source Sans Pro, sans-serif;
+    color: var(--secondary-blue, #334D6E);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_weekday {
+      @include typography(normal);
+      @include fontSize(.875rem, 1.25rem);
+      color: var(--light-secondary-blue, #90A0B7);
+    }
+
+    &_range-start-end {
+      background: var(--blue, #4263EB);
+      color: var(--white, #FFF);
+    }
+
+    &_range-mid {
+      background-color: var(--light-blue, #A0B1F520);
+    }
+  }
+}

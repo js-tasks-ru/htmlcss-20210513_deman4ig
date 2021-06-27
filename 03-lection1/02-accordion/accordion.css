@@ -1,63 +1,65 @@
-/* Стилизация аккордеона */
 .accordion {
-    background: var(--white, white);
-    border: 1px solid var(--grey-3, grey);
-    box-sizing: border-box;
-    border-radius: 8px;
-    padding: 24px 32px;
-    margin-bottom: 8px;
-    width: 100%;
+  background: var(--white, white);
+  border: 1px solid var(--grey-3, grey);
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
-
+@media screen and (max-width: 767px) {
+  .accordion {
+    padding: 1rem 1.5rem;
+  }
+}
 .accordion_preview {
-    width: 100%;
+  width: 100%;
 }
-
 .accordion:last-of-type {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-
-.accordion__summary {
-    list-style: none;
-}
-
-.accordion__summary::-webkit-details-marker {
-    display: none;
-}
-
-.accordion__summary {
-    position: relative;
-    color: var(--black, black);
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.accordion__icon {
-    width: 26px;
-    height: 26px;
-    color: var(--grey-4, #495057);
-    transition: all 200ms ease-in-out;
-}
-
 .accordion[open] .accordion__icon {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.accordion__summary {
+  font-weight: normal;
+  color: var(--black, #212429);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+.accordion__icon {
+  width: 26px;
+  height: 26px;
+  color: var(--grey-4, #495057);
+  transition: all 200ms ease-in-out;
+}
+.accordion__content {
+  font-weight: normal;
+  color: var(--black, #212429);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  color: var(--grey-4, grey);
+  transition: all 200ms ease-in-out;
+  cursor: default;
+}
+@media screen and (max-width: 767px) {
+  .accordion__content {
+    margin-top: 1rem;
+  }
 }
 
-.accordion__content {
-    margin: 16px 0 0 0;
-    color: var(--grey-4, grey);
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    transition: all 200ms ease-in-out;
-    cursor: default;
-}
+/*# sourceMappingURL=accordion.css.map */

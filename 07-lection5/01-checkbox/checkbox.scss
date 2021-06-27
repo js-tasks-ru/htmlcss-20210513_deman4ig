@@ -1,0 +1,74 @@
+@import "../../assets/css/config/mixins";
+
+.checkbox {
+    &__input {
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+        outline: none;
+
+        &:checked {
+            ~ .checkbox__wrapper {
+                .checkbox__control {
+                    background-color: var(--blue, #4263eb);
+                    border-color: var(--blue, #4263eb);
+                }
+
+                .checkbox__icon {
+                    display: block;
+                }
+            }
+        }
+
+        &:disabled {
+            ~ .checkbox__wrapper {
+                pointer-events: none;
+                cursor: default;
+
+                .checkbox__control {
+                    background-color: var(--grey-2, #dde2e5);
+                }
+
+                .checkbox__label {
+                    color: var(--grey-2, #dde2e5);
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__control {
+        width: 28px;
+        height: 28px;
+        background: var(--white, #fff);
+        border: 1px solid var(--grey-2, #dde2e5);
+        box-sizing: border-box;
+        border-radius: 4px;
+        position: relative;
+    }
+
+    &__label {
+        @include typography(normal);
+        @include fontSize(1rem, 1.5rem);
+        color: var(--grey-4, #495057);
+        margin: 0 0 0 12px;
+    }
+
+    &__icon {
+        display: none;
+        width: 15px;
+        height: 14px;
+        color: var(--white, #fff);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,65 @@
+@import "../../assets/css/config/mixins";
+
+.accordion {
+  background: var(--white, white);
+  border: 1px solid var(--grey-3, grey);
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+  margin-bottom: .5rem;
+  width: 100%;
+
+  @include mobileBreakpoint {
+    padding: 1rem 1.5rem;
+  }
+
+  &_preview {
+    width: 100%;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &[open] .accordion__icon {
+    transform: rotate(180deg);
+  }
+
+  &__summary {
+    @include typography(normal);
+    @include fontSize(1rem, 1.5rem);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 26px;
+    height: 26px;
+    color: var(--grey-4, #495057);
+    transition: all 200ms ease-in-out;
+  }
+
+  &__content {
+    @include typography(normal);
+    @include fontSize(1rem, 1.5rem);
+    margin-top: 1rem;
+    color: var(--grey-4, grey);
+    transition: all 200ms ease-in-out;
+    cursor: default;
+
+    @include mobileBreakpoint {
+      margin-top: 1rem;
+    }
+  }
+}

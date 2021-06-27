@@ -1,0 +1,74 @@
+@import "../../assets/css/config/mixins";
+
+@keyframes appear {
+  0% {
+    transform: scaleY(0);
+    transform-origin: bottom center;
+  }
+
+  50% {
+    transform: scaleY(0);
+    transform-origin: bottom center;
+  }
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: bottom center;
+  }
+}
+
+.histogram {
+  @include typography(normal);
+  @include fontSize(1rem, 1.5rem);
+
+  border: 1px solid var(--grey-3, #ACB5BD);
+  border-radius: var(--border-radius);
+  background: var(--white, #FFFFFF);
+  width: 100%;
+
+  &__inner {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--blue, #4263EB);
+    margin-left: 2rem;
+  }
+
+  &__counter {
+    color: var(--black, #212429);
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+
+  &__chart {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: flex-end;
+    animation: appear .6s ease-out;
+  }
+
+  &__chart-bar {
+    background-color: var(--blue, #4263EB);
+    margin-right: 1px;
+    flex: 1 1 9px;
+
+    &:hover {
+      background-color: var(--dark-blue, #2342C0);
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

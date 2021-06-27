@@ -2,31 +2,41 @@
 @import './reset.css';
 @import '../../node_modules/normalize.css/normalize.css';
 @import '../fonts/fonts.css';
-@import '../fonts/typography.css';
+@import '../fonts/typography.scss';
 
-/* Page layout */
-@import '../../components/page/page.css';
-@import '../../components/header/header.css';
-@import '../../components/main/main.css';
-@import '../../components/footer/footer.css';
-@import '../../components/component-preview/component-preview.css';
+/* Home page layout */
+/* Header */
+@import '../../components/header/header.scss';
+@import '../../components/logo/logo.scss';
+@import '../../components/navigation/navigation.scss';
+
+/* Main */
+@import '../../components/card/card.scss';
+@import '../../components/component-preview/component-preview.scss';
+@import '../../components/flex-grid/flex-grid.scss';
+@import '../../components/home-page/home-page.scss';
+@import '../../components/page/page.scss';
+@import '../../components/tabs/tabs.scss';
+
+/* Footer */
+@import '../../components/footer/footer.scss';
+
+/* Template page layout */
+@import '../../components/template/template.scss';
 
 /* Components */
-@import '../../components/components-layout/components-layout.css';
-@import '../../components/card/card.css';
-@import '../../03-lection1/01-button/button.css';
-@import '../../03-lection1/02-accordion/accordion.css';
-@import '../../04-lection2/01-histogram/histogram.css';
-@import '../../04-lection2/02-skeleton/skeleton.css';
-@import '../../05-lection3/01-tooltip/tooltip.css';
-@import '../../05-lection3/02-modal/modal.css';
-@import '../../05-lection3/03-calendar/calendar.css';
-@import '../../06-lection4/01-avatar/avatar.css';
-@import '../../components/tabs/tabs.css';
-@import '../../07-lection5/01-checkbox/checkbox.css';
-@import '../../07-lection5/02-radio/radio.css';
-@import '../../07-lection5/03-toggler/toggler.css';
-@import '../../07-lection5/04-input/input.css';
+@import '../../03-lection1/01-button/button.scss';
+@import '../../03-lection1/02-accordion/accordion.scss';
+@import '../../04-lection2/01-histogram/histogram.scss';
+@import '../../04-lection2/02-skeleton/skeleton.scss';
+@import '../../05-lection3/01-tooltip/tooltip.scss';
+@import '../../05-lection3/02-modal/modal.scss';
+@import '../../05-lection3/03-calendar/calendar.scss';
+@import '../../06-lection4/01-avatar/avatar.scss';
+@import '../../07-lection5/01-checkbox/checkbox.scss';
+@import '../../07-lection5/02-radio/radio.scss';
+@import '../../07-lection5/03-toggler/toggler.scss';
+@import '../../07-lection5/04-input/input.scss';
 
 :root {
     --white: #ffffff;
@@ -73,7 +83,4 @@ html {
     overflow: auto;
     margin-left: calc(100vw - 100%);
     margin-right: 0;
-}
-
-body {
 }
