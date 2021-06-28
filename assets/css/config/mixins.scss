@@ -19,3 +19,23 @@ $mobileBreakpoint: 767px;
   font-size: #{$font-size};
   line-height: #{$line-height};
 }
+
+@mixin tabsHelper($tabID) {
+  &:checked {
+    ~ .tabs__nav {
+      .tabs__nav-label_tab#{$tabID} {
+        color: var(--black, #212429);
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    ~ .tabs__content-wrapper {
+      .tabs__content-tab_tab#{$tabID} {
+        display: flex;
+      }
+    }
+  }
+}
