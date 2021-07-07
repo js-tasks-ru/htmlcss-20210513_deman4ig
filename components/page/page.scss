@@ -1,8 +1,16 @@
+@import '../../assets/css/config/mixins';
+
 .page {
     background-color: var(--page-background, #F9FAFC);
 
     &__box {
         max-width: 1110px;
         margin: 0 auto;
+        padding: 0 16px;
+
+        @include mobileBreakpoint {
+            max-width: none;
+            width: 100vw;
+        }
     }
 }

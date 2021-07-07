@@ -9,9 +9,11 @@
 
   border: none;
   border-radius: var(--border-radius);
-  padding: 16px 64px;
   cursor: pointer;
   transition: background-color 200ms ease-in-out, border 200ms ease-in-out;
+
+  padding: 1rem 4rem;
+  width: 100%;
 
   &_primary {
     background-color: var(--blue, #4263EB);

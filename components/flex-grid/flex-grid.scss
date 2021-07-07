@@ -1,13 +1,32 @@
+@import '../../assets/css/config/mixins';
+
 .flex-grid {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
   padding: 43px 0;
 
+  @include mobileBreakpoint {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+    gap: 16px;
+    //padding: 24px 16px;
+  }
+
   &__item {
     min-height: 300px;
     margin: 15px;
     width: calc(100%/3 - 30px);
+
+    @include tabletBreakpoint {
+      width: calc(100%/2 - 30px);
+    }
+
+    @include mobileBreakpoint {
+      width: 100%;
+      margin: 0;
+    }
   }
 }
 
