@@ -2,90 +2,83 @@
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
-  <title>Component page</title>
-  <link href='../build/style.css' rel='stylesheet'>
+  <title>Accordion</title>
+  <link rel='stylesheet' href='../build/style.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      body {
+          background-color: var(--page-background);
+      }
+  </style>
 </head>
-<body class='page'>
-<div class='template'>
-  <header class='template__header'>
-    <div class='page__box'>
-      <div class='header__inner'>
-        <div class='header__nav-bar'>
-          <svg class='logo'>
+<body class='grid-layout grid-layout_3row grid-layout_gap-medium'>
+<header class='header'>
+  <div class='page__box'>
+    <div class='header__inner'>
+      <div class='header__nav-bar'>
+        <a href='/'>
+          <svg class='logo logo_black'>
             <use href='../../assets/images/sprites.svg#logo'></use>
           </svg>
-          <nav class='navigation'>
-            <a class='navigation__link navigation__link_current'
-               href='#'>Components</a>
-            <a class='navigation__link'
-               href='#'>About</a>
-            <a class='navigation__link'
-               href='#'>Contact</a>
-          </nav>
+        </a>
+        <nav class='navigation'>
+          <a class='navigation__link navigation__link_current'
+             href='#'>Components</a>
+          <a class='navigation__link'
+             href='#'>About</a>
+          <a class='navigation__link'
+             href='#'>Contact</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class='page__box'>
+    <div class='grid-layout grid-layout_2col grid-layout_gap-large'>
+      <aside class='sidebar'>
+        <h4 class='sidebar__heading'>Components</h4>
+        <ul class='sidebar__list'>
+          <li class='sidebar__list-item'><a href='/pages/accordion.html' class='sidebar__link'>Accordion</a></li>
+          <li class='sidebar__list-item'><a href='/pages/avatar.html' class='sidebar__link'>Avatar</a></li>
+          <li class='sidebar__list-item'><a href='/pages/buttons.html' class='sidebar__link'>Buttons</a></li>
+          <li class='sidebar__list-item'><a href='/pages/calendar.html' class='sidebar__link'>Calendar</a></li>
+          <li class='sidebar__list-item'><a href='/pages/form-elements.html' class='sidebar__link'>Custom form
+            elements</a></li>
+          <li class='sidebar__list-item'><a href='/pages/histogram.html' class='sidebar__link'>Histogram</a></li>
+          <li class='sidebar__list-item'><a href='/pages/modal.html' class='sidebar__link'>Modal</a></li>
+          <li class='sidebar__list-item'><a href='/pages/skeleton.html' class='sidebar__link'>Skeleton</a></li>
+          <li class='sidebar__list-item'><a href='/pages/tooltip.html' class='sidebar__link'>Tooltip</a></li>
+        </ul>
+      </aside>
+      <section class='component-card'>
+        <h3 class='component-card__heading'>Accordion</h3>
+        <div class='component-card__preview'>
+          <details class='accordion'>
+            <summary class='accordion__summary'>Accordion Item
+              <svg class='accordion__icon'>
+                <use href='../../assets/images/sprites.svg#dropdown-arrow'></use>
+              </svg>
+            </summary>
+            <p class='accordion__content'>Amet minim mollit non deserunt ullamco est sit
+              aliqua
+              dolor do amet sint. Velit officia
+              consequat duis enim velit mollit. Exercitation
+              veniam
+              consequat sunt nostrud amet.</p>
+          </details>
         </div>
-      </div>
-    </div>
-  </header>
-  <main class='template__main page__box'>
-    <div class='template__sidebar'>
-      <h4 class='template__sidebar-heading'>Components</h4>
-      <ul class='template__sidebar-links'>
-        <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                              href='/pages/accordion.html'>Accordion
-        </a></li>
-        <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                              href='/pages/avatar.html'>Avatar</a></li>
-        <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                              href='/pages/buttons.html'>Buttons</a></li>
-        <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                              href='/pages/calendar.html'>Calendar
-        </a></li>
-        <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                              href='/pages/form-elements.html'>Custom
-          form
-          elements
-        </a></li>
-        <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                              href='/pages/histogram.html'>Histogram
-        </a></li>
-        <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                              href='/pages/modal.html'>Modal</a></li>
-        <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                              href='/pages/skeleton.html'>Skeleton
-        </a></li>
-        <li class='template__sidebar-item'><a class='template__sidebar-link'
-                                              href='/pages/tooltip.html'>Tooltip</a></li>
-      </ul>
-    </div>
-    <div class='template__component'>
-      <h3 class='template__component-heading'>Accordion</h3>
-      <div class='template__component-preview'>
-        <details class='accordion'>
-          <summary class='accordion__summary'>Accordion Item
-            <svg class='accordion__icon'>
-              <use href='../../assets/images/sprites.svg#dropdown-arrow'></use>
-            </svg>
-          </summary>
-          <p class='accordion__content'>Amet minim mollit non deserunt ullamco est sit
-            aliqua
-            dolor do amet sint. Velit officia
-            consequat duis enim velit mollit. Exercitation
-            veniam
-            consequat sunt nostrud amet.</p>
-        </details>
-      </div>
-      <div class='tabs'>
-        <input checked
-               class='tabs__radio-input'
-               id='tab0'
-               name='code'
-               type='radio'>
-        <input class='tabs__radio-input'
-               id='tab1'
-               name='code'
-               type='radio'>
-        <nav class='tabs__nav'>
-          <div class='page__box'>
+        <div class='tabs'>
+          <input checked
+                 class='tabs__radio-input'
+                 id='tab0'
+                 name='code'
+                 type='radio'>
+          <input class='tabs__radio-input'
+                 id='tab1'
+                 name='code'
+                 type='radio'>
+          <nav class='tabs__nav'>
             <ul class='tabs__nav-wrapper'>
               <li class='tabs__nav-item'>
                 <label for='tab0' class='tabs__nav-label tabs__nav-label_tab0'>HTML</label>
@@ -94,30 +87,29 @@
                 <label for='tab1' class='tabs__nav-label tabs__nav-label_tab1'>CSS</label>
               </li>
             </ul>
-          </div>
-        </nav>
-        <div class='tabs__divider'></div>
-        <section class='tabs__content-wrapper'>
-          <div class='tabs__content-tab tabs__content-tab_tab0'>
-              <pre class='template__component-code'>
-                <code>
-&lt;details class='accordion'&gt;
-  &lt;summary class='accordion__summary'&gt;Accordion Item
-    &lt;svg class='accordion__icon'&gt;
-      &lt;use href='../../assets/images/sprites.svg#dropdown-arrow'&gt;&lt;/use&gt;
+          </nav>
+          <div class='tabs__divider'></div>
+          <div class='tabs__content-wrapper'>
+            <div class='tabs__content-tab tabs__content-tab_tab0'>
+              <figure class='code-snippet component-card__code'>
+            <pre class='code-snippet__wrapper'>
+              <code class='code-snippet__content'>
+&lt;details class=&#39;accordion&#39;&gt;
+  &lt;summary class=&#39;accordion__summary&#39;&gt;Accordion Item
+    &lt;svg class=&#39;accordion__icon&#39;&gt;
+      &lt;use href=&#39;../../assets/images/sprites.svg#dropdown-arrow&#39;&gt;&lt;/use&gt;
     &lt;/svg&gt;
   &lt;/summary&gt;
-  &lt;p class='accordion__content'&gt;Amet minim mollit non deserunt ullamco est sit aliqua
-    dolor do amet sint. Velit officia
-    consequat duis enim velit mollit. Exercitation veniam
-    consequat sunt nostrud amet.&lt;/p&gt;
+  &lt;p class=&#39;accordion__content&#39;&gt;Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.&lt;/p&gt;
 &lt;/details&gt;
-                </code>
-              </pre>
-          </div>
-          <div class='tabs__content-tab tabs__content-tab_tab1'>
-              <pre class='template__component-code'>
-                <code>
+              </code>
+            </pre>
+              </figure>
+            </div>
+            <div class='tabs__content-tab tabs__content-tab_tab1'>
+              <figure class='code-snippet component-card__code'>
+                <pre class='code-snippet__wrapper'>
+                  <code class='code-snippet__content'>
 .accordion {
   background: var(--white, white);
   border: 1px solid var(--grey-3, grey);
@@ -175,16 +167,18 @@
   transition: all 200ms ease-in-out;
   cursor: default;
 }
-                </code>
-              </pre>
+                  </code>
+                </pre>
+              </figure>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
-  </main>
-  <footer class='template__footer'>
-    <h5 class='template__footer-heading'>Reusable component library</h5>
-  </footer>
-</div>
+  </div>
+</main>
+<footer class='footer'>
+  <h5 class='footer__alternative'>Reusable component library</h5>
+</footer>
 </body>
 </html>

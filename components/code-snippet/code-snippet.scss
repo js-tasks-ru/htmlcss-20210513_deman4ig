@@ -1,0 +1,10 @@
+.code-snippet {
+  overflow: hidden;
+
+  &__wrapper {
+    font-family: inherit;
+    overflow-x: auto;
+  }
+
+  &__content {}
+}

@@ -1,9 +1,15 @@
+@import '../../assets/css/config/mixins';
+
 .navigation {
     list-style: none;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
+
+    @include mobileBreakpoint {
+        display: none;
+    }
 
     &__link {
         margin-right: 24px;

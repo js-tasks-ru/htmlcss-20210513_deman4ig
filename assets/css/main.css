@@ -22,7 +22,10 @@
 @import '../../components/footer/footer.scss';
 
 /* Template page layout */
-@import '../../components/template/template.scss';
+@import '../../components/grid-layout/grid-layout.scss';
+@import '../../components/sidebar/sidebar.scss';
+@import '../../components/code-snippet/code-snippet.scss';
+@import '../../components/component-card/component-card.scss';
 
 /* Components */
 @import '../../03-lection1/01-button/button.scss';
@@ -79,8 +82,12 @@ body {
     height: 100%;
 }
 
-html {
-    overflow: auto;
-    margin-left: calc(100vw - 100%);
-    margin-right: 0;
+@media screen and (min-width: 1024px) {
+    html {
+        /*overflow: auto;*/
+        margin-left: calc(100vw - 100%);
+        margin-right: 0;
+    }
 }
+
+

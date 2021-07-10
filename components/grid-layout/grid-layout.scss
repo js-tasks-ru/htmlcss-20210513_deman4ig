@@ -1,0 +1,25 @@
+@import "../../assets/css/config/mixins";
+
+.grid-layout {
+  display: grid;
+
+  &_2col {
+    grid-template-columns: auto 1fr;
+
+    @include mobileBreakpoint {
+      display: block;
+    }
+  }
+
+  &_3row {
+    grid-template-rows: auto 1fr auto;
+  }
+
+  &_gap-medium {
+    grid-gap: 38px;
+  }
+
+  &_gap-large {
+    grid-gap: 56px;
+  }
+}
