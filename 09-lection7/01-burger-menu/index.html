@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <!-- Страница бургер-меню -->
-<html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./burger-menu.css">
-        <script defer src="./burger-menu.js"></script>
-    </head>
-    <body>
-
-    </body>
+<html lang='ru'>
+<head>
+  <link rel='stylesheet' href='../../build/style.css'>
+  <script defer src='./burger-menu.js'></script>
+  <meta name='viewport' content='initial-scale=1, width=device-width'>
+</head>
+<body>
+<div class='burger-menu'>
+  <div class='burger-menu__wrapper' id='burger-menu'>
+    <div class='page__box'>
+      <div class='burger-menu__divider'></div>
+      <div class='dark-mode__control-wrapper'>
+        <p>Dark mode</p>
+        <label class='toggler'>
+          <input class='toggler__input'
+                 type='checkbox'>
+          <div class='toggler__wrapper'>
+            <div class='toggler__control toggler__control_nolabel'>
+              <div class='toggler__checkmark'></div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class='burger-menu__divider'></div>
+      <nav class='side-navigation'>
+        <h4 class='side-navigation__heading'>Components</h4>
+        <ul class='side-navigation__list'>
+          <li class='side-navigation__list-item'><a href='./pages/accordion.html' class='side-navigation__link'>Accordion</a></li>
+          <li class='side-navigation__list-item'><a href='./pages/avatar.html' class='side-navigation__link'>Avatar</a></li>
+          <li class='side-navigation__list-item'><a href='./pages/buttons.html' class='side-navigation__link'>Buttons</a></li>
+          <li class='side-navigation__list-item'><a href='./pages/calendar.html' class='side-navigation__link'>Calendar</a></li>
+          <li class='side-navigation__list-item'><a href='./pages/form-elements.html' class='side-navigation__link'>Custom form
+            elements</a></li>
+          <li class='side-navigation__list-item'><a href='./pages/histogram.html' class='side-navigation__link'>Histogram</a></li>
+          <li class='side-navigation__list-item'><a href='./pages/modal.html' class='side-navigation__link'>Modal</a></li>
+          <li class='side-navigation__list-item'><a href='./pages/skeleton.html' class='side-navigation__link'>Skeleton</a></li>
+          <li class='side-navigation__list-item'><a href='./pages/tooltip.html' class='side-navigation__link'>Tooltip</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class='burger-menu__control' id='burger-menu-open'>
+    <svg class='burger-menu__control-icon'>
+      <use xlink:href='../../assets/images/sprites.svg#burger-menu'></use>
+    </svg>
+  </div>
+  <div class='burger-menu__control burger-menu__control_close' id='burger-menu-close'>
+    <svg class='burger-menu__control-icon'>
+      <use xlink:href='../../assets/images/sprites.svg#close-icon'></use>
+    </svg>
+  </div>
+</div>
+</body>
 </html>

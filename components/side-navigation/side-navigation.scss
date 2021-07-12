@@ -1,0 +1,40 @@
+@import '../../assets/css/config/mixins';
+
+.side-navigation {
+
+  &__heading {
+    margin-bottom: 16px;
+    @include typography(normal);
+    @include fontSize(20px, 26px);
+
+    @include mobileBreakpoint {
+      color: var(--grey-3, #ACB5BD);
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    margin-bottom: 4px;
+
+    @include mobileBreakpoint {
+      margin-bottom: 16px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    @include typography(normal);
+    @include fontSize(14px, 22px);
+
+    @include mobileBreakpoint {
+      @include fontSize(16px, 24px);
+    }
+  }
+}

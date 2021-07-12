@@ -1,0 +1,13 @@
+@import '../../assets/css/config/mixins';
+
+.dark-mode {
+
+  &__control-wrapper {
+    display: flex;
+    align-items: center;
+
+    @include mobileBreakpoint {
+      justify-content: space-between;
+    }
+  }
+}
