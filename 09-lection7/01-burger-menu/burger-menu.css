@@ -1,3 +1,8 @@
+@media screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+}
 .burger-menu__control {
   display: block;
   width: 32px;
@@ -11,11 +16,6 @@
   border-radius: 50%;
   display: none;
   z-index: 1;
-}
-@media screen and (min-width: 768px) {
-  .burger-menu__control {
-    display: none;
-  }
 }
 .burger-menu__control-icon {
   width: 24px;

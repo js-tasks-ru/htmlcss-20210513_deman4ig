@@ -3,6 +3,9 @@
 $headerHeight: 64px;
 
 .burger-menu {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 
   &__control {
     display: block;
@@ -17,10 +20,6 @@ $headerHeight: 64px;
       border-radius: 50%;
       display: none;
       z-index: 1;
-    }
-
-    @media screen and (min-width: 768px) {
-      display: none;
     }
   }
 
